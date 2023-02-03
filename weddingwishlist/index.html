@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <section id="All-tab">
+            <div class="container">
+                <div class="all-tab-title">
+                    <h1 class="title">Mənim Favorilərim</h1>
+                </div>
+                <div class="all-tab-div">
+                    <button class="active" data-id="all">Hamısı</button>
+                    <button data-id="dress">Geyimlər</button>
+                    <button data-id="real">Saraylar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="Tab-divs">
+            <div class="container">
+                <div class="all element active" data-id="all">
+                    <div id="Cards">
+                        <div class="inner-container">
+                            <div class="card">
+                                <i class="fa-solid fa-xmark"></i>
+                                <img src="http://st1.myideasoft.com/idea/jn/11/myassets/products/258/butterfly-on.jpg?revision=1666425414" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Etoile 2022</h5>
+                                    <p class="card-text">SOLEIL</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <i class="fa-solid fa-xmark"></i>
+                                <img src="https://st3.myideasoft.com/idea/jn/11/myassets/products/280/bathilde-on.jpg?revision=1666424240" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">ELYSEE Ateller 2022</h5>
+                                    <p class="card-text">LOUVRE</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <i class="fa-solid fa-xmark"></i>
+                                <img src="http://st1.myideasoft.com/idea/jn/11/myassets/products/245/carlotta-on.jpg?revision=1660898410" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Justin Alexander 2022</h5>
+                                    <p class="card-text">DEIDRA</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <i class="fa-solid fa-xmark"></i>
+                                <img src="http://st3.myideasoft.com/idea/jn/11/myassets/products/170/donna-on.jpg?revision=1666600099" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Moonlight Bridal 20220</h5>
+                                    <p class="card-text">H1394</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dress element" data-id="dress">
+                    <h1>Geyimlər</h1>
+                    <div class="geyim-tab-div">
+                        <button class="active">Hamısı</button>
+                        <button>Geyimlər</button>
+                        <button>Kostyumlar</button>
+                    </div>
+                </div>
+                <div class="real element" data-id="real">
+                    <h1>Saraylar</h1>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="Notfound" class="">
+            <div class="notfound-div">
+                <img src="/assets/images/notfound-icon.png" alt="">
+                <p>Favorilərə heç bir məhsul əlavə etməmisiniz</p>
+                <button class="notfound">Browse</button>
+            </div>
+        </section>
+        
+
+        <script src="/assets/js/script.js"></script>
+    </body>
+</html>
