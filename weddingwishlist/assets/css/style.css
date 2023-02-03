@@ -197,6 +197,9 @@ a {
 #Notfound {
   display: none;
 }
+#Notfound button {
+  cursor: pointer;
+}
 
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
