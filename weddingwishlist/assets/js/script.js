@@ -16,6 +16,7 @@ all_tab_buttons.forEach(item => {
 
         if (item.getAttribute('data-id') === 'all') {
             browse_button.style.display = 'none'
+            notfound.classList.remove('notfound-active')
         }else{
             notfound.classList.add('notfound-active')
             browse_button.style.display = 'inline-block';
