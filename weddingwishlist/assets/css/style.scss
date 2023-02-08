@@ -8,6 +8,15 @@ a{
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6,
+p, a, button{
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    padding: 2rem 0;
+}
+
 .container{
     padding: 0 5rem;
 }
@@ -62,19 +71,20 @@ a{
         }
 
         #Cards{
+            padding: 2rem 0 0 0;
             .inner-container{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 1rem;
                 grid-template-rows: auto;
-                .card{
+                .card.bridal{
                     position: relative;
                     border-radius: 8px;
                     border: 1px solid #c9c7c7;
                     overflow: hidden;
                     display: grid;
-                    grid-template-rows: 270px auto;
-                    i{
+                    grid-template-rows: 240px auto;
+                    i.fa-xmark{
                         position: absolute;
                         top: 10px;
                         right: 10px;
@@ -84,15 +94,95 @@ a{
                         -webkit-text-stroke-color: black;
                     }
                     img{
-                        height: 270px;
+                        height: 240px;
                         width: 100%;
                         object-fit: cover;
                         object-position: top center;
                     }
                     .card-body{
-                        padding: 10px 20px;
+                        padding: 8px 20px;
                         display: flex;
-                        text-align: center;
+                        text-align: start;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: 5px;
+                        position: relative;
+                        .card-title{
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 18px;
+                            font-weight: 900;
+                            line-height: 21.6px;
+                            text-decoration: none solid rgb(36, 36, 36);
+                            color: #242424;
+                            margin: 0;
+                        }
+                        // .card-text{
+                        //     font-family: 'Poppins', sans-serif;
+                        //     font-size: 15px;
+                        //     line-height: 21px;
+                        //     text-decoration: none solid rgb(62, 62, 62);
+                        //     color: #3e3e3e;
+                        // }
+                        .price-div{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            gap: 5px;
+                            p{
+                                margin: 0;
+                                font-family: 'Poppins', sans-serif;
+                                font-size: 14px;
+                                line-height: 21px;
+                                text-decoration: none solid rgb(33, 37, 41);
+                                color: #212529;
+                            }
+                        }
+                        .details{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .left, .right{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                align-items: center;
+                                gap: 5px;
+                                p{
+                                    margin: 0;
+                                    font-family: 'Poppins', sans-serif;
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                    text-decoration: none solid rgb(33, 37, 41);
+                                    color: #212529;
+                                }
+                            }
+                        }
+                    }
+                }
+                .card.palace{
+                    position: relative;
+                    box-shadow: 0px 3px 3px #eeeeee;
+                    border: none;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    display: grid;
+                    grid-template-rows: 240px auto;
+                    i.fa-xmark{
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        font-size: 22px;
+                        color: red;
+                        -webkit-text-stroke-width: 0.5px;
+                        -webkit-text-stroke-color: black;
+                    }
+                    img{
+                        height: 240px;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center center;
+                    }
+                    .card-body{
+                        padding: 8px 20px;
+                        display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         gap: 5px;
@@ -105,13 +195,13 @@ a{
                             color: #242424;
                             margin: 0;
                         }
-                        .card-text{
-                            font-family: 'Poppins', sans-serif;
-                            font-size: 15px;
-                            line-height: 21px;
-                            text-decoration: none solid rgb(62, 62, 62);
-                            color: #3e3e3e;
-                        }
+                        // .card-text{
+                        //     font-family: 'Poppins', sans-serif;
+                        //     font-size: 15px;
+                        //     line-height: 21px;
+                        //     text-decoration: none solid rgb(62, 62, 62);
+                        //     color: #3e3e3e;
+                        // }
                         .details{
                             display: flex;
                             align-items: center;
@@ -119,7 +209,7 @@ a{
                             .left, .right{
                                 display: grid;
                                 grid-template-columns: auto auto;
-                                align-items: center;
+                                // align-items: center;
                                 gap: 5px;
                                 p{
                                     margin: 0;
@@ -173,11 +263,17 @@ a{
         }
 
         .real{
+            .title-div{
+                border-bottom: 1px solid rgb(187, 186, 186);
+            }
             h1{
                 font-size: 28px;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
-            border-bottom: 1px solid rgb(187, 186, 186);
+            #Cards{
+                
+            }
+            
         }
     }
 }
@@ -228,6 +324,21 @@ a{
         #Cards{
             .inner-container{
                 grid-template-columns: repeat(3, 1fr) !important;
+                .card{
+                    .card-body{
+                        .details{
+                            flex-direction: column;
+                            align-items: flex-start !important;
+                            gap: 5px;
+                            .left, .right{
+                                grid-template-columns: 20px auto !important;
+                                i{
+                                    text-align: center !important;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -245,4 +356,26 @@ a{
         }
     }
     
+}
+
+@media (max-width: 1300px) {
+    #Cards{
+        .inner-container{
+            .card{
+                .card-body{
+                    .details{
+                        flex-direction: column !important;
+                        align-items: flex-start !important;
+                        gap: 5px;
+                        .left, .right{
+                            grid-template-columns: 20px auto !important;
+                            i{
+                                text-align: center !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

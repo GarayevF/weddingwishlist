@@ -14,7 +14,7 @@ all_tab_buttons.forEach(item => {
         active_content.classList.remove('active');
         document.querySelector(`#Tab-divs [data-id="${item.getAttribute('data-id')}"]`).classList.add('active');
 
-        if (item.getAttribute('data-id') === 'all') {
+        if (item.getAttribute('data-id') === 'all' || item.getAttribute('data-id') === 'real') {
             browse_button.style.display = 'none'
             notfound.classList.remove('notfound-active')
         }else{
