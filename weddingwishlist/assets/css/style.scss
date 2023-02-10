@@ -80,7 +80,7 @@ body{
                 .card.bridal{
                     position: relative;
                     border-radius: 8px;
-                    border: 1px solid #c9c7c7;
+                    box-shadow: 0px 3px 3px #eeeeee;
                     overflow: hidden;
                     display: grid;
                     grid-template-rows: 240px auto;
@@ -116,13 +116,6 @@ body{
                             color: #242424;
                             margin: 0;
                         }
-                        // .card-text{
-                        //     font-family: 'Poppins', sans-serif;
-                        //     font-size: 15px;
-                        //     line-height: 21px;
-                        //     text-decoration: none solid rgb(62, 62, 62);
-                        //     color: #3e3e3e;
-                        // }
                         .price-div{
                             display: grid;
                             grid-template-columns: auto auto;
@@ -195,13 +188,6 @@ body{
                             color: #242424;
                             margin: 0;
                         }
-                        // .card-text{
-                        //     font-family: 'Poppins', sans-serif;
-                        //     font-size: 15px;
-                        //     line-height: 21px;
-                        //     text-decoration: none solid rgb(62, 62, 62);
-                        //     color: #3e3e3e;
-                        // }
                         .details{
                             display: flex;
                             align-items: center;
@@ -209,7 +195,6 @@ body{
                             .left, .right{
                                 display: grid;
                                 grid-template-columns: auto auto;
-                                // align-items: center;
                                 gap: 5px;
                                 p{
                                     margin: 0;
@@ -224,10 +209,6 @@ body{
                     }
                 }
             }
-        }
-
-        .all{
-
         }
 
         .dress{
@@ -269,9 +250,6 @@ body{
             h1{
                 font-size: 28px;
                 margin-bottom: 10px;
-            }
-            #Cards{
-                
             }
             
         }
@@ -346,7 +324,7 @@ body{
 
 @media (max-width: 768px) {
     .container{
-        padding: 0 1rem;
+        padding: 0 10px;
     }
     #Tab-divs{
         #Cards{
@@ -355,7 +333,36 @@ body{
             }
         }
     }
-    
+}
+
+@media (max-width: 600px) {
+    #Tab-divs{
+        #Cards{
+            .inner-container{
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+                .card{
+                    grid-template-rows: 160px auto !important;
+                    img{
+                        height: 160px !important;
+                    }
+                    .card-body{
+                        padding: 4px 15px !important;
+                        .card-title{
+                            font-size: 16px !important;
+                        }
+                        .details{
+                            gap: 5px;
+                            p{
+                                font-size: 12px !important;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1300px) {

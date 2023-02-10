@@ -33,7 +33,6 @@ body {
   margin: 0 auto;
   overflow: hidden;
   display: flex;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border: 1px solid rgb(200, 204, 207);
@@ -75,7 +74,7 @@ body {
 #Tab-divs .container #Cards .inner-container .card.bridal {
   position: relative;
   border-radius: 8px;
-  border: 1px solid #c9c7c7;
+  box-shadow: 0px 3px 3px #eeeeee;
   overflow: hidden;
   display: grid;
   grid-template-rows: 240px auto;
@@ -247,6 +246,7 @@ body {
   font-size: 28px;
   margin-bottom: 10px;
 }
+
 #Notfound {
   padding: 3rem;
 }
@@ -302,10 +302,34 @@ body {
 }
 @media (max-width: 768px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 10px;
   }
   #Tab-divs #Cards .inner-container {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 600px) {
+  #Tab-divs #Cards .inner-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  #Tab-divs #Cards .inner-container .card {
+    grid-template-rows: 160px auto !important;
+  }
+  #Tab-divs #Cards .inner-container .card img {
+    height: 160px !important;
+  }
+  #Tab-divs #Cards .inner-container .card .card-body {
+    padding: 4px 15px !important;
+  }
+  #Tab-divs #Cards .inner-container .card .card-body .card-title {
+    font-size: 16px !important;
+  }
+  #Tab-divs #Cards .inner-container .card .card-body .details {
+    gap: 5px;
+  }
+  #Tab-divs #Cards .inner-container .card .card-body .details p {
+    font-size: 12px !important;
   }
 }
 @media (max-width: 1300px) {
