@@ -151,6 +151,9 @@ body{
                                 display: grid;
                                 grid-template-columns: auto auto;
                                 align-items: flex-start;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
                                 gap: 5px;
                                 p{
                                     margin: 0;
@@ -158,6 +161,9 @@ body{
                                     font-size: 14px;
                                     text-decoration: none solid rgb(33, 37, 41);
                                     color: #212529;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
                                 }
                             }
                         }
@@ -219,12 +225,18 @@ body{
                                 grid-template-columns: auto auto;
                                 gap: 5px;
                                 align-items: flex-start;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
                                 p{
                                     margin: 0;
                                     font-family: 'Poppins', sans-serif;
                                     font-size: 14px;
                                     text-decoration: none solid rgb(33, 37, 41);
                                     color: #212529;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
                                 }
                             }
                         }

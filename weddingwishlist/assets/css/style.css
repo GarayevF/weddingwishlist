@@ -152,6 +152,9 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   align-items: flex-start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   gap: 5px;
 }
 #Tab-divs .container .Cards .inner-container .card.bridal .card-body .details .left p, #Tab-divs .container .Cards .inner-container .card.bridal .card-body .details .right p {
@@ -161,6 +164,9 @@ body {
   -webkit-text-decoration: none solid rgb(33, 37, 41);
           text-decoration: none solid rgb(33, 37, 41);
   color: #212529;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #Tab-divs .container .Cards .inner-container .card.palace {
   position: relative;
@@ -224,6 +230,9 @@ body {
   grid-template-columns: auto auto;
   gap: 5px;
   align-items: flex-start;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #Tab-divs .container .Cards .inner-container .card.palace .card-body .details .left p, #Tab-divs .container .Cards .inner-container .card.palace .card-body .details .right p {
   margin: 0;
@@ -232,6 +241,9 @@ body {
   -webkit-text-decoration: none solid rgb(33, 37, 41);
           text-decoration: none solid rgb(33, 37, 41);
   color: #212529;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #Tab-divs .container .dress h1 {
   font-size: 28px;
