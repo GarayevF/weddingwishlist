@@ -21,7 +21,7 @@ body{
     padding: 0 5rem;
 }
 
-#All-tab{
+.All-tab{
     padding: 2rem 0;
     .container{
         .all-tab-title{
@@ -70,7 +70,7 @@ body{
             display: none;
         }
 
-        #Cards{
+        .Cards{
             padding: 2rem 0 0 0;
             .inner-container{
                 display: grid;
@@ -84,14 +84,25 @@ body{
                     overflow: hidden;
                     display: grid;
                     grid-template-rows: 240px auto;
-                    i.fa-xmark{
+                    i.fa-solid{
                         position: absolute;
                         top: 10px;
                         right: 10px;
                         font-size: 22px;
-                        color: red;
-                        -webkit-text-stroke-width: 0.5px;
-                        -webkit-text-stroke-color: black;
+                        color: rgba(63, 63, 63, 0.491);
+                        transition: .3s;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        &:hover{
+                            top: 8px;
+                            right: 8px;
+                            color: #fff;
+                            transform: rotate(90deg);
+                            background-color: red;
+                            padding: 4px 8px;
+                            -webkit-text-stroke-width: 0.5px;
+                            -webkit-text-stroke-color: black;
+                        }
                     }
                     img{
                         height: 240px;
@@ -107,14 +118,19 @@ body{
                         justify-content: space-between;
                         gap: 5px;
                         position: relative;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
                         .card-title{
                             font-family: 'Poppins', sans-serif;
                             font-size: 18px;
                             font-weight: 900;
-                            line-height: 21.6px;
                             text-decoration: none solid rgb(36, 36, 36);
                             color: #242424;
                             margin: 0;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
                         }
                         .price-div{
                             display: grid;
@@ -124,25 +140,22 @@ body{
                                 margin: 0;
                                 font-family: 'Poppins', sans-serif;
                                 font-size: 14px;
-                                line-height: 21px;
                                 text-decoration: none solid rgb(33, 37, 41);
                                 color: #212529;
                             }
                         }
                         .details{
                             display: flex;
-                            align-items: center;
                             justify-content: space-between;
                             .left, .right{
                                 display: grid;
                                 grid-template-columns: auto auto;
-                                align-items: center;
+                                align-items: flex-start;
                                 gap: 5px;
                                 p{
                                     margin: 0;
                                     font-family: 'Poppins', sans-serif;
                                     font-size: 14px;
-                                    line-height: 21px;
                                     text-decoration: none solid rgb(33, 37, 41);
                                     color: #212529;
                                 }
@@ -158,14 +171,25 @@ body{
                     overflow: hidden;
                     display: grid;
                     grid-template-rows: 240px auto;
-                    i.fa-xmark{
+                    i.fa-solid{
                         position: absolute;
                         top: 10px;
                         right: 10px;
                         font-size: 22px;
-                        color: red;
-                        -webkit-text-stroke-width: 0.5px;
-                        -webkit-text-stroke-color: black;
+                        color: rgba(63, 63, 63, 0.491);
+                        transition: .3s;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        &:hover{
+                            top: 8px;
+                            right: 8px;
+                            color: #fff;
+                            transform: rotate(90deg);
+                            background-color: red;
+                            padding: 4px 8px;
+                            -webkit-text-stroke-width: 0.5px;
+                            -webkit-text-stroke-color: black;
+                        }
                     }
                     img{
                         height: 240px;
@@ -183,24 +207,22 @@ body{
                             font-family: 'Poppins', sans-serif;
                             font-size: 18px;
                             font-weight: 900;
-                            line-height: 21.6px;
                             text-decoration: none solid rgb(36, 36, 36);
                             color: #242424;
                             margin: 0;
                         }
                         .details{
                             display: flex;
-                            align-items: center;
                             justify-content: space-between;
                             .left, .right{
                                 display: grid;
                                 grid-template-columns: auto auto;
                                 gap: 5px;
+                                align-items: flex-start;
                                 p{
                                     margin: 0;
                                     font-family: 'Poppins', sans-serif;
                                     font-size: 14px;
-                                    line-height: 21px;
                                     text-decoration: none solid rgb(33, 37, 41);
                                     color: #212529;
                                 }
@@ -299,19 +321,19 @@ body{
         padding: 0 25px;
     }
     #Tab-divs{
-        #Cards{
+        #Cards-div{
             .inner-container{
-                grid-template-columns: repeat(3, 1fr) !important;
+                grid-template-columns: repeat(3, 1fr);
                 .card{
                     .card-body{
                         .details{
                             flex-direction: column;
-                            align-items: flex-start !important;
+                            align-items: flex-start;
                             gap: 5px;
                             .left, .right{
-                                grid-template-columns: 20px auto !important;
+                                grid-template-columns: 20px auto;
                                 i{
-                                    text-align: center !important;
+                                    text-align: center;
                                 }
                             }
                         }
@@ -327,58 +349,101 @@ body{
         padding: 0 10px;
     }
     #Tab-divs{
-        #Cards{
+        #Cards-div{
             .inner-container{
-                grid-template-columns: repeat(2, 1fr) !important;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     }
 }
 
 @media (max-width: 600px) {
+    #All-tab{
+        padding: 1rem 0;   
+        .all-tab-title{
+            .title.tab-title{
+                font-size: 20px;
+            }
+        }
+        .all-tab-div{
+            button{
+                font-size: 16px;
+                padding: 7px 12px;
+            }
+        }
+    }
     #Tab-divs{
-        #Cards{
+        .container{
+            #Cards-div{
+                padding-top: 1rem;
+            }
+        }
+        .element{
+            .title-div{
+                h1{
+                    font-size: 20px;
+                }
+            }
+        }
+        #Cards-div{
             .inner-container{
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 10px !important;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
                 .card{
-                    grid-template-rows: 160px auto !important;
+                    grid-template-rows: 160px auto;
+                    border-radius: 8px;
                     img{
-                        height: 160px !important;
+                        height: 160px;
                     }
                     .card-body{
-                        padding: 4px 15px !important;
+                        padding: 4px 8px;
                         .card-title{
-                            font-size: 16px !important;
+                            font-size: 14px;
                         }
                         .details{
                             gap: 5px;
                             p{
-                                font-size: 12px !important;
+                                font-size: 12px;
                             }
-                            
+                            .left, .right, .price-div{
+                                svg{
+                                    width: 16px;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
+
+    #Notfound{
+        .notfound-div{
+            img{
+                width: 50px;
+            }
+            p{
+                font-size: 14px;
+            }
+            button{
+                font-size: 16px;
+                padding: 7px 12px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1300px) {
-    #Cards{
+    #Cards-div{
         .inner-container{
             .card{
                 .card-body{
                     .details{
-                        flex-direction: column !important;
-                        align-items: flex-start !important;
+                        flex-direction: column;
+                        align-items: flex-start;
                         gap: 5px;
                         .left, .right{
-                            grid-template-columns: 20px auto !important;
-                            i{
-                                text-align: center !important;
-                            }
+                            grid-template-columns: 20px auto;
                         }
                     }
                 }
