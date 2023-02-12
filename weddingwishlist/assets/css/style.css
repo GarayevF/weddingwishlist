@@ -72,12 +72,18 @@ body {
   grid-template-rows: auto;
 }
 #Tab-divs .container .Cards .inner-container .card.bridal {
+  cursor: pointer;
   position: relative;
   border-radius: 8px;
   box-shadow: 0px 3px 3px #eeeeee;
   overflow: hidden;
   display: grid;
   grid-template-rows: 240px auto;
+  transition: 0.3s;
+}
+#Tab-divs .container .Cards .inner-container .card.bridal:hover {
+  box-shadow: 0px 3px 3px 3px #d6d6d6;
+  transform: scale(1.01);
 }
 #Tab-divs .container .Cards .inner-container .card.bridal i.fa-solid {
   position: absolute;
@@ -176,6 +182,12 @@ body {
   overflow: hidden;
   display: grid;
   grid-template-rows: 240px auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#Tab-divs .container .Cards .inner-container .card.palace:hover {
+  box-shadow: 0px 3px 3px 3px #d6d6d6;
+  transform: scale(1.01);
 }
 #Tab-divs .container .Cards .inner-container .card.palace i.fa-solid {
   position: absolute;
