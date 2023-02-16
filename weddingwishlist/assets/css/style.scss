@@ -89,6 +89,16 @@ body{
                     &:hover{
                         box-shadow: 0px 3px 3px 3px #d6d6d6;
                         transform: scale(1.01);
+                        i.fa-solid{
+                            top: 8px;
+                            right: 8px;
+                            color: #fff;
+                            transform: rotate(90deg);
+                            background-color: red;
+                            padding: 4px 8px;
+                            -webkit-text-stroke-width: 0.5px;
+                            -webkit-text-stroke-color: black;
+                        }
                     }
                     i.fa-solid{
                         position: absolute;
@@ -99,16 +109,6 @@ body{
                         transition: .3s;
                         border-radius: 50%;
                         cursor: pointer;
-                        &:hover{
-                            top: 8px;
-                            right: 8px;
-                            color: #fff;
-                            transform: rotate(90deg);
-                            background-color: red;
-                            padding: 4px 8px;
-                            -webkit-text-stroke-width: 0.5px;
-                            -webkit-text-stroke-color: black;
-                        }
                     }
                     img{
                         height: 240px;
@@ -189,6 +189,16 @@ body{
                     &:hover{
                         box-shadow: 0px 3px 3px 3px #d6d6d6;
                         transform: scale(1.01);
+                        i.fa-solid{
+                            top: 8px;
+                            right: 8px;
+                            color: #fff;
+                            transform: rotate(90deg);
+                            background-color: red;
+                            padding: 4px 8px;
+                            -webkit-text-stroke-width: 0.5px;
+                            -webkit-text-stroke-color: black;
+                        }
                     }
                     i.fa-solid{
                         position: absolute;
@@ -199,16 +209,6 @@ body{
                         transition: .3s;
                         border-radius: 50%;
                         cursor: pointer;
-                        &:hover{
-                            top: 8px;
-                            right: 8px;
-                            color: #fff;
-                            transform: rotate(90deg);
-                            background-color: red;
-                            padding: 4px 8px;
-                            -webkit-text-stroke-width: 0.5px;
-                            -webkit-text-stroke-color: black;
-                        }
                     }
                     img{
                         height: 240px;
