@@ -9,7 +9,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6,
-p, a, button {
+p, span, a, li, button {
   font-family: "Poppins", sans-serif;
 }
 
@@ -56,14 +56,26 @@ body {
   border-right: 1px solid rgb(200, 204, 207);
 }
 
+#Categories .container .all-items-div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+#Categories .container .all-items-div .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+#Categories .container .all-items-div .item span {
+  margin-top: 10px;
+}
+
 #Tab-divs .container .element.active {
   display: grid;
 }
 #Tab-divs .container .element {
   display: none;
-}
-#Tab-divs .container .Cards {
-  padding: 2rem 0 0 0;
 }
 #Tab-divs .container .Cards .inner-container {
   display: grid;

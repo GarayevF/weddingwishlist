@@ -1,0 +1,762 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, span, a, li, button, input {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 2rem 0;
+}
+
+.container {
+  padding: 0 5rem;
+}
+
+.All-tab {
+  padding: 2rem 0;
+}
+.All-tab .container .all-tab-title .title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+.All-tab .container .all-tab-div {
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid rgb(200, 204, 207);
+  border-radius: 0.5em;
+}
+.All-tab .container .all-tab-div .active {
+  background-color: #fff;
+  color: black;
+}
+.All-tab .container .all-tab-div button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 10px 1rem;
+  background: rgb(240, 244, 247);
+  color: grey;
+  font-size: 18px;
+}
+.All-tab .container .all-tab-div button:not(:first-child):not(:last-child) {
+  border-left: 1px solid rgb(200, 204, 207);
+  border-right: 1px solid rgb(200, 204, 207);
+}
+
+#Categories .container {
+  padding: 2rem 0 4rem;
+}
+#Categories .container .all-items-div {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+#Categories .container .all-items-div .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+#Categories .container .all-items-div .item span {
+  margin-top: 10px;
+}
+
+#Tab-divs .container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 3fr;
+}
+#Tab-divs .container .left {
+  padding: 0 35px 0 0;
+}
+#Tab-divs .container .left .gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #d9d9d9;
+  cursor: pointer;
+}
+#Tab-divs .container .left .gallery p {
+  font-size: 14px;
+  padding: 15px 0;
+}
+#Tab-divs .container .left .gallery p span {
+  font-size: 18px;
+  font-weight: bold;
+}
+#Tab-divs .container .left .gallery .icon-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Tab-divs .container .left #gallery-sub {
+  overflow: scroll;
+  height: 0px;
+  transition: 0.3s;
+}
+#Tab-divs .container .left #gallery-sub ul {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0 10px;
+}
+#Tab-divs .container .left #gallery-sub ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+#Tab-divs .container .left .neckline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+#Tab-divs .container .left .neckline span {
+  font-weight: bold;
+}
+#Tab-divs .container .left #neckline-sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 230px;
+  max-height: 230px;
+  overflow: scroll;
+  transition: 0.3s;
+  border-bottom: 1px solid #d9d9d9;
+}
+#Tab-divs .container .left #neckline-sub .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  padding: 1rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#Tab-divs .container .left #neckline-sub .item:hover {
+  background-color: rgb(238, 208, 238);
+}
+#Tab-divs .container .left #neckline-sub .item span {
+  font-size: 12px;
+}
+#Tab-divs .container .left .silhouette {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+#Tab-divs .container .left .silhouette span {
+  font-weight: bold;
+}
+#Tab-divs .container .left #silhouette-sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 230px;
+  max-height: 230px;
+  overflow: scroll;
+  transition: 0.3s;
+  border-bottom: 1px solid #d9d9d9;
+}
+#Tab-divs .container .left #silhouette-sub .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  padding: 1rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#Tab-divs .container .left #silhouette-sub .item:hover {
+  background-color: rgb(238, 208, 238);
+}
+#Tab-divs .container .left #silhouette-sub .item span {
+  font-size: 12px;
+}
+#Tab-divs .container .left .gender {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+#Tab-divs .container .left .gender span {
+  font-weight: bold;
+}
+#Tab-divs .container .left #gender-sub {
+  overflow: hidden;
+  height: 0px;
+  max-height: 230px;
+  transition: 0.3s;
+  border-bottom: 1px solid #d9d9d9;
+}
+#Tab-divs .container .left #gender-sub ul {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0 10px;
+}
+#Tab-divs .container .left #gender-sub ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+}
+#Tab-divs .container .left .color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+#Tab-divs .container .left .color span {
+  font-weight: bold;
+}
+#Tab-divs .container .left #color-sub {
+  overflow: hidden;
+  height: 0px;
+  max-height: 230px;
+  transition: 0.3s;
+  border-bottom: 1px solid #d9d9d9;
+}
+#Tab-divs .container .left #color-sub ul {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0 10px;
+}
+#Tab-divs .container .left #color-sub ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+}
+#Tab-divs .container .left .fabric {
+  display: flex;
+  flex-direction: column;
+}
+#Tab-divs .container .left .fabric .name-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+#Tab-divs .container .left .fabric .name-div span {
+  font-weight: bold;
+}
+#Tab-divs .container .left .fabric .input-div {
+  position: relative;
+}
+#Tab-divs .container .left .fabric .input-div input {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 10px 25px 10px 10px;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#Tab-divs .container .left .fabric .input-div i {
+  transform: translateY(-50%);
+  top: 50%;
+  right: 10px;
+  position: absolute;
+  font-size: 24px;
+  line-height: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #8c8c8c;
+  font-size: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  transition: all 0.3s;
+  user-select: none;
+  opacity: 1;
+  cursor: pointer;
+  border: 0;
+  background: 0 0;
+  outline: 0;
+}
+#Tab-divs .container .left #fabric-sub {
+  overflow: hidden;
+  height: 0px;
+  max-height: 230px;
+  transition: 0.3s;
+  border-bottom: 1px solid #d9d9d9;
+  margin-top: 20px;
+}
+#Tab-divs .container .left #fabric-sub ul {
+  padding: 5px 0 10px;
+}
+#Tab-divs .container .left #fabric-sub ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+}
+#Tab-divs .container .right .element {
+  display: grid;
+}
+#Tab-divs .container .right .Cards .inner-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  grid-template-rows: auto;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal {
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 3px 3px #eeeeee;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 240px auto;
+  transition: 0.3s;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal:hover {
+  box-shadow: 0px 3px 3px 3px #d6d6d6;
+  transform: scale(1.01);
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal:hover i.fa-solid {
+  top: 8px;
+  right: 8px;
+  color: #fff;
+  transform: rotate(90deg);
+  background-color: red;
+  padding: 4px 8px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal:hover img.main-image {
+  opacity: 0;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal .featured {
+  background-color: #d8b74e;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding: 4px 4px 4px 0;
+  line-height: 1em;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  font-size: 14px;
+  z-index: 99;
+  pointer-events: none;
+  -webkit-clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0 100%, 0 0);
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal i.fa-solid {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: rgba(63, 63, 63, 0.491);
+  transition: 0.3s;
+  border-radius: 50%;
+  z-index: 99;
+  cursor: pointer;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal img {
+  height: 240px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal img.main-image {
+  position: absolute;
+  transition: 0.4s;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal img.main-image:hover {
+  opacity: 0;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal .card-body {
+  padding: 8px 15px;
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  position: relative;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal .card-body .card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  -webkit-text-decoration: none solid rgb(36, 36, 36);
+          text-decoration: none solid rgb(36, 36, 36);
+  color: #242424;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal .card-body .details {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal .card-body .details .sub-title {
+  flex: 1;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal .card-body .details .sub-title p.card-text {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  -webkit-text-decoration: none solid rgb(33, 37, 41);
+          text-decoration: none solid rgb(33, 37, 41);
+  color: #212529;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal .card-body .details .price-div {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  flex: 1;
+  overflow: hidden;
+  justify-content: end;
+}
+#Tab-divs .container .right .Cards .inner-container .card.bridal .card-body .details .price-div p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  -webkit-text-decoration: none solid rgb(33, 37, 41);
+          text-decoration: none solid rgb(33, 37, 41);
+  color: #212529;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace {
+  position: relative;
+  box-shadow: 0px 3px 3px #eeeeee;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 240px auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace:hover {
+  box-shadow: 0px 3px 3px 3px #d6d6d6;
+  transform: scale(1.01);
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace:hover i.fa-solid {
+  top: 8px;
+  right: 8px;
+  color: #fff;
+  transform: rotate(90deg);
+  background-color: red;
+  padding: 4px 8px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace:hover img.main-image {
+  opacity: 0;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace .featured {
+  background-color: #d8b74e;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding: 4px 4px 4px 0;
+  line-height: 1em;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  font-size: 14px;
+  z-index: 99;
+  pointer-events: none;
+  -webkit-clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 85% 50%, 100% 100%, 0 100%, 0 0);
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace i.fa-solid {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: rgba(63, 63, 63, 0.491);
+  transition: 0.3s;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace img {
+  height: 240px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace img.main-image {
+  position: absolute;
+  transition: 0.4s;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace .card-body {
+  padding: 8px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 5px;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace .card-body .card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  -webkit-text-decoration: none solid rgb(36, 36, 36);
+          text-decoration: none solid rgb(36, 36, 36);
+  color: #242424;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace .card-body .details {
+  display: flex;
+  justify-content: space-between;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace .card-body .details .left, #Tab-divs .container .right .Cards .inner-container .card.palace .card-body .details .right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace .card-body .details .left p, #Tab-divs .container .right .Cards .inner-container .card.palace .card-body .details .right p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  -webkit-text-decoration: none solid rgb(33, 37, 41);
+          text-decoration: none solid rgb(33, 37, 41);
+  color: #212529;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace .card-body .details .left {
+  justify-content: start;
+}
+#Tab-divs .container .right .Cards .inner-container .card.palace .card-body .details .right {
+  justify-content: end;
+}
+#Tab-divs .container .right .pagination {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#Tab-divs .container .right .pagination .active {
+  background-color: purple;
+}
+#Tab-divs .container .right .pagination .active span {
+  color: #fff;
+  font-weight: bold;
+}
+#Tab-divs .container .right .pagination ul {
+  display: flex;
+  gap: 5px;
+}
+#Tab-divs .container .right .pagination ul li {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  color: #8c8c8c;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 6px 8px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  list-style-type: none;
+}
+#Tab-divs .container .right .pagination ul li:hover {
+  color: plum;
+  border: 1px solid plum;
+}
+#Tab-divs .container .right .pagination ul li span {
+  min-width: 20px;
+}
+
+#Notfound {
+  padding: 3rem;
+}
+#Notfound .notfound-div {
+  text-align: center;
+}
+#Notfound .notfound-div img {
+  width: 70px;
+}
+#Notfound .notfound-div p {
+  color: gray;
+  margin: 20px 0;
+}
+#Notfound .notfound-div button {
+  display: none;
+  background-color: rgb(167, 69, 167);
+  color: #fff;
+  padding: 10px 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+#Notfound.notfound-active {
+  display: block;
+}
+
+#Notfound {
+  display: none;
+}
+#Notfound button {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    padding: 0 25px;
+  }
+  #Tab-divs #Cards-div .inner-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .left, #Tab-divs #Cards-div .inner-container .card .card-body .details .right {
+    grid-template-columns: 20px auto;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .left i, #Tab-divs #Cards-div .inner-container .card .card-body .details .right i {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  #Tab-divs #Cards-div .inner-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  #All-tab {
+    padding: 1rem 0;
+  }
+  #All-tab .all-tab-title .title.tab-title {
+    font-size: 20px;
+  }
+  #All-tab .all-tab-div button {
+    font-size: 16px;
+    padding: 7px 12px;
+  }
+  #Tab-divs .container #Cards-div {
+    padding-top: 1rem;
+  }
+  #Tab-divs .element .title-div h1 {
+    font-size: 20px;
+  }
+  #Tab-divs #Cards-div .inner-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  #Tab-divs #Cards-div .inner-container .card {
+    grid-template-rows: 160px auto;
+    border-radius: 8px;
+  }
+  #Tab-divs #Cards-div .inner-container .card img {
+    height: 160px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body {
+    padding: 4px 8px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .card-title {
+    font-size: 14px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details {
+    gap: 5px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .sub-title p {
+    font-size: 12px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .left svg, #Tab-divs #Cards-div .inner-container .card .card-body .details .right svg, #Tab-divs #Cards-div .inner-container .card .card-body .details .price-div svg {
+    width: 16px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .left p, #Tab-divs #Cards-div .inner-container .card .card-body .details .right p, #Tab-divs #Cards-div .inner-container .card .card-body .details .price-div p {
+    font-size: 12px;
+  }
+  #Notfound .notfound-div img {
+    width: 50px;
+  }
+  #Notfound .notfound-div p {
+    font-size: 14px;
+  }
+  #Notfound .notfound-div button {
+    font-size: 16px;
+    padding: 7px 12px;
+  }
+}
+@media (max-width: 1300px) {
+  #Cards-div .inner-container .card .card-body .details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  #Cards-div .inner-container .card .card-body .details .left, #Cards-div .inner-container .card .card-body .details .right {
+    grid-template-columns: 20px auto;
+  }
+  #Cards-div .inner-container .card .card-body .details .sub-title {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1100px) {
+  #Tab-divs #Cards-div .inner-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .left, #Tab-divs #Cards-div .inner-container .card .card-body .details .right {
+    grid-template-columns: 20px auto;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .left i, #Tab-divs #Cards-div .inner-container .card .card-body .details .right i {
+    text-align: center;
+  }
+}/*# sourceMappingURL=weddingdesign.css.map */
