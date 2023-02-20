@@ -14,6 +14,21 @@ gallery.addEventListener('click', function(){
 })
 
 
+let gender = document.querySelector('#Tab-divs .left .gender');
+
+gender.addEventListener('click', function(){
+    let subgender = document.querySelector('#gender-sub');
+    subgender.classList.toggle('active');
+
+    let hght = subgender.scrollHeight;
+
+    if (subgender.classList.contains('active')) {
+        subgender.style.height = hght + 'px';        
+    }else{
+        subgender.style.height = 1 + 'px';
+    }
+})
+
 let color = document.querySelector('#Tab-divs .left .color');
 
 color.addEventListener('click', function(){
@@ -93,45 +108,3 @@ fabric_search.addEventListener('keyup', function(){
 })
 
 
-
-
-let neckline = document.querySelector('#Tab-divs .left .neckline');
-
-neckline.addEventListener('click', function(){
-    let subneckline = document.querySelector('#neckline-sub');
-    subneckline.classList.toggle('active');
-
-    let hght = subneckline.scrollHeight;
-
-    if (subneckline.classList.contains('active')) {
-        if (subneckline.scrollHeight > 230) {
-            subneckline.style.height = 230 + 'px';
-        }else{
-            subneckline.style.height = hght + 'px';
-        }
-        
-    }else{
-        subneckline.style.height = 1 + 'px';
-    }
-})
-
-let silhouette = document.querySelector('#Tab-divs .left .silhouette');
-
-silhouette.addEventListener('click', function(){
-    let subsilhouette = document.querySelector('#silhouette-sub');
-    subsilhouette.classList.toggle('active');
-
-    let hght = subsilhouette.scrollHeight;
-
-    if (subsilhouette.classList.contains('active')) {
-        if (subsilhouette.scrollHeight > 230) {
-            subsilhouette.style.height = 230 + 'px';
-        }else{
-            subsilhouette.style.height = hght + 'px';
-        }
-        
-        
-    }else{
-        subsilhouette.style.height = 1 + 'px';
-    }
-})

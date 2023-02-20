@@ -14,6 +14,21 @@ gallery.addEventListener('click', function(){
 })
 
 
+let gender = document.querySelector('#Tab-divs .left .gender');
+
+gender.addEventListener('click', function(){
+    let subgender = document.querySelector('#gender-sub');
+    subgender.classList.toggle('active');
+
+    let hght = subgender.scrollHeight;
+
+    if (subgender.classList.contains('active')) {
+        subgender.style.height = hght + 'px';        
+    }else{
+        subgender.style.height = 1 + 'px';
+    }
+})
+
 let color = document.querySelector('#Tab-divs .left .color');
 
 color.addEventListener('click', function(){
