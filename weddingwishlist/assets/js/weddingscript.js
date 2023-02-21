@@ -14,30 +14,114 @@ gallery.addEventListener('click', function(){
 })
 
 
-let color = document.querySelector('#Tab-divs .left .color');
+let color = document.querySelector('#Tab-divs .left .color .name-div');
+let color_search = document.querySelector('#Tab-divs .left .color .input-div input');
+let color_close = document.querySelector('#Tab-divs .left .color .input-div i');
+let colorIsClicked = false
+
 document.querySelector('#color-sub').style.height = (document.querySelector('#color-sub').scrollHeight + 1) + 'px';
 
-color.addEventListener('click', function(){
+color_close.addEventListener('mousedown', function(e){
+    color_search.value = '';
+    colorIsClicked = true;
+    let ul = document.querySelector('#color-sub ul');
+    let li = ul.getElementsByTagName('li');
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "";
+    }
+
+    let subcolor = document.querySelector('#color-sub');
+    let hght = subcolor.scrollHeight;
+    subcolor.style.height = (hght + 1) + 'px';
+    subcolor.style.marginTop = '0';
+    color_search.focus();
+})
+
+color.addEventListener('mousedown', function(e){
+    e.preventDefault();
     let subcolor = document.querySelector('#color-sub');
     subcolor.classList.toggle('active');
-
     let hght = subcolor.scrollHeight;
-
-    if (subcolor.classList.contains('active')) {
-        subcolor.style.height = (hght+1) + 'px';        
+    if (subcolor.classList.contains('active')){
+        subcolor.style.height = (hght + 1) + 'px';
+        subcolor.style.marginTop = '0';
+        color_search.focus()
     }else{
         subcolor.style.height = 1 + 'px';
+        subcolor.style.marginTop = '20px';
+        color_search.blur()
     }
+    
+})
+
+color_search.addEventListener('focus', function(){
+    let subcolor = document.querySelector('#color-sub');
+    let hght = subcolor.scrollHeight;
+    if (!subcolor.classList.contains('active')){
+        subcolor.classList.add('active');
+    }
+    subcolor.style.height = (hght + 1) + 'px';
+    subcolor.style.marginTop = '0';
+
+})
+
+color_search.addEventListener('blur', function(){
+    if (!colorIsClicked) {
+        let subcolor = document.querySelector('#color-sub');
+
+        if (subcolor.classList.contains('active')){
+            subcolor.classList.remove('active');
+        }
+        
+        subcolor.style.height = 1 + 'px';
+        subcolor.style.marginTop = '20px';
+    }else{
+        colorIsClicked = false
+        color_search.focus()
+    }
+})
+
+color_search.addEventListener('keyup', function(){
+    let filter = color_search.value.toUpperCase();
+    let ul = document.querySelector('#color-sub ul');
+    let li = ul.getElementsByTagName('li');
+
+    for (i = 0; i < li.length; i++) {
+        span = li[i].getElementsByTagName("span")[0];
+        txtValue = span.textContent || span.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "flex";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+    
+    let subcolor = document.querySelector('#color-sub');
+    subcolor.style.height = ul.scrollHeight + 'px';
+    
 })
 
 let fabric = document.querySelector('#Tab-divs .left .fabric .name-div');
 let fabric_search = document.querySelector('#Tab-divs .left .fabric .input-div input');
 let fabric_close = document.querySelector('#Tab-divs .left .fabric .input-div i');
+let fabricIsClicked = false
 
 document.querySelector('#fabric-sub').style.height = (document.querySelector('#fabric-sub').scrollHeight + 1) + 'px';
 
-fabric_close.addEventListener('click', function(){
+fabric_close.addEventListener('mousedown', function(e){
     fabric_search.value = '';
+    fabricIsClicked = true;
+    let ul = document.querySelector('#fabric-sub ul');
+    let li = ul.getElementsByTagName('li');
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "";
+    }
+
+    let subfabric = document.querySelector('#fabric-sub');
+    let hght = subfabric.scrollHeight;
+    subfabric.style.height = (hght + 1) + 'px';
+    subfabric.style.marginTop = '0';
+    fabric_search.focus();
 })
 
 fabric.addEventListener('mousedown', function(e){
@@ -47,38 +131,42 @@ fabric.addEventListener('mousedown', function(e){
     let hght = subfabric.scrollHeight;
     if (subfabric.classList.contains('active')){
         subfabric.style.height = (hght + 1) + 'px';
+        subfabric.style.marginTop = '0';
         fabric_search.focus()
     }else{
         subfabric.style.height = 1 + 'px';
+        subfabric.style.marginTop = '20px';
         fabric_search.blur()
     }
     
 })
 
 fabric_search.addEventListener('focus', function(){
-
     let subfabric = document.querySelector('#fabric-sub');
     let hght = subfabric.scrollHeight;
     if (!subfabric.classList.contains('active')){
         subfabric.classList.add('active');
     }
     subfabric.style.height = (hght + 1) + 'px';
+    subfabric.style.marginTop = '0';
 
 })
 
-fabric_search.addEventListener('blur', function(e){
-    let subfabric = document.querySelector('#fabric-sub');
+fabric_search.addEventListener('blur', function(){
+    if (!fabricIsClicked) {
+        let subfabric = document.querySelector('#fabric-sub');
 
-    if (subfabric.classList.contains('active')){
-        subfabric.classList.remove('active');
+        if (subfabric.classList.contains('active')){
+            subfabric.classList.remove('active');
+        }
+        
+        subfabric.style.height = 1 + 'px';
+        subfabric.style.marginTop = '20px';
+    }else{
+        fabricIsClicked = false
+        fabric_search.focus()
     }
-    
-    subfabric.style.height = 1 + 'px';
 })
-
-let filter = fabric_search.value.toUpperCase();
-let ul = document.querySelector('#fabric-sub ul');
-let li = ul.getElementsByTagName('li');
 
 fabric_search.addEventListener('keyup', function(){
     let filter = fabric_search.value.toUpperCase();
@@ -89,11 +177,15 @@ fabric_search.addEventListener('keyup', function(){
         span = li[i].getElementsByTagName("span")[0];
         txtValue = span.textContent || span.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
+            li[i].style.display = "flex";
         } else {
             li[i].style.display = "none";
         }
     }
+    
+    let subfabric = document.querySelector('#fabric-sub');
+    subfabric.style.height = ul.scrollHeight + 'px';
+    
 })
 
 

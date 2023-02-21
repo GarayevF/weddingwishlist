@@ -100,8 +100,8 @@ body{
                     font-size: 14px;
                     padding: 15px 0;
                     span{
-                        font-size: 18px;
-                        font-weight: bold;
+                        font-size: 20px;
+                        font-weight: 500;
                     }
                 }
                 .icon-div{
@@ -119,12 +119,14 @@ body{
                     border-bottom: 1px solid #d9d9d9;
                     padding: 5px 0 10px;
                     li{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 12px 0;
-                        list-style-type: none;
-                        cursor: pointer;
+                        a{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 12px 0;
+                            list-style-type: none;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -139,44 +141,11 @@ body{
                     padding: 15px 0;
                     cursor: pointer;
                     span{
-                        font-weight: bold;
+                        font-size: 20px;
+                        font-weight: 500;
                     }
                 }
 
-                .input-div{
-                    position: relative;
-                    input{
-                        font-size: 14px;
-                        line-height: 21px;
-                        font-weight: 400;
-                        border: 1px solid #d9d9d9;
-                        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 10%);
-                        display: block;
-                        padding: 10px 25px 10px 10px;
-                        border-radius: 3px;
-                        width: 100%;
-                        box-sizing: border-box;
-                    }
-                    i{
-                        transform: translateY(-50%);
-                        top: 50%;
-                        right: 10px;
-                        position: absolute;
-                        font-size: 24px;
-                        line-height: 20px;
-                        user-select: none;
-                        color: #8c8c8c;
-                        font-size: 20px;
-                        appearance: none;
-                        transition: all .3s;
-                        user-select: none;
-                        opacity: 1;
-                        cursor: pointer;
-                        border: 0;
-                        background: 0 0;
-                        outline: 0;
-                    }
-                }
             }
             #neckline-sub{
                 display: grid;
@@ -212,44 +181,11 @@ body{
                     padding: 15px 0;
                     cursor: pointer;
                     span{
-                        font-weight: bold;
+                        font-size: 20px;
+                        font-weight: 500;
                     }
                 }
 
-                .input-div{
-                    position: relative;
-                    input{
-                        font-size: 14px;
-                        line-height: 21px;
-                        font-weight: 400;
-                        border: 1px solid #d9d9d9;
-                        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 10%);
-                        display: block;
-                        padding: 10px 25px 10px 10px;
-                        border-radius: 3px;
-                        width: 100%;
-                        box-sizing: border-box;
-                    }
-                    i{
-                        transform: translateY(-50%);
-                        top: 50%;
-                        right: 10px;
-                        position: absolute;
-                        font-size: 24px;
-                        line-height: 20px;
-                        user-select: none;
-                        color: #8c8c8c;
-                        font-size: 20px;
-                        appearance: none;
-                        transition: all .3s;
-                        user-select: none;
-                        opacity: 1;
-                        cursor: pointer;
-                        border: 0;
-                        background: 0 0;
-                        outline: 0;
-                    }
-                }
             }
             #silhouette-sub{
                 display: grid;
@@ -285,7 +221,8 @@ body{
                     padding: 15px 0;
                     cursor: pointer;
                     span{
-                        font-weight: bold;
+                        font-size: 20px;
+                        font-weight: 500;
                     }
                 }
 
@@ -296,10 +233,9 @@ body{
                         line-height: 21px;
                         font-weight: 400;
                         border: 1px solid #d9d9d9;
-                        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 10%);
                         display: block;
-                        padding: 10px 25px 10px 10px;
-                        border-radius: 3px;
+                        padding: 5px 25px 5px 10px;
+                        border-radius: 5px;
                         width: 100%;
                         box-sizing: border-box;
                     }
@@ -344,7 +280,6 @@ body{
             .fabric{
                 display: flex;
                 flex-direction: column;
-                
                 .name-div{
                     display: flex;
                     justify-content: space-between;
@@ -352,7 +287,8 @@ body{
                     padding: 15px 0;
                     cursor: pointer;
                     span{
-                        font-weight: bold;
+                        font-size: 20px;
+                        font-weight: 500;
                     }
                 }
 
@@ -363,10 +299,9 @@ body{
                         line-height: 21px;
                         font-weight: 400;
                         border: 1px solid #d9d9d9;
-                        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 10%);
                         display: block;
-                        padding: 10px 25px 10px 10px;
-                        border-radius: 3px;
+                        padding: 5px 25px 5px 10px;
+                        border-radius: 5px;
                         width: 100%;
                         box-sizing: border-box;
                     }
@@ -396,7 +331,6 @@ body{
                 max-height: 230px;
                 transition: .3s;
                 border-bottom: 1px solid #d9d9d9;
-                margin-top: 20px;
                 ul{
                     padding: 5px 0 10px;
                     li{
@@ -415,7 +349,8 @@ body{
                 padding: 15px 0;
                 cursor: pointer;
                 span{
-                    font-weight: bold;
+                    font-size: 20px;
+                    font-weight: 500;
                 }
             }
             #price-sub{
@@ -536,7 +471,7 @@ body{
                         box-shadow: 0px 3px 3px #eeeeee;
                         overflow: hidden;
                         display: grid;
-                        grid-template-rows: 280px auto;
+                        grid-template-rows: 300px auto;
                         transition: .3s;
                         &:hover{
                             box-shadow: 0px 3px 3px 3px #d6d6d6;
@@ -584,7 +519,7 @@ body{
                             cursor: pointer;
                         }
                         img{
-                            height: 280px;
+                            height: 300px;
                             width: 100%;
                             object-fit: cover;
                             object-position: top center;

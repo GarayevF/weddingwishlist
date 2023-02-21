@@ -97,8 +97,8 @@ body {
   padding: 15px 0;
 }
 #Tab-divs .container .left .gallery p span {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 500;
 }
 #Tab-divs .container .left .gallery .icon-div {
   display: flex;
@@ -115,7 +115,7 @@ body {
   border-bottom: 1px solid #d9d9d9;
   padding: 5px 0 10px;
 }
-#Tab-divs .container .left #gallery-sub ul li {
+#Tab-divs .container .left #gallery-sub ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,45 +135,8 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left .neckline .name-div span {
-  font-weight: bold;
-}
-#Tab-divs .container .left .neckline .input-div {
-  position: relative;
-}
-#Tab-divs .container .left .neckline .input-div input {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  border: 1px solid #d9d9d9;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  display: block;
-  padding: 10px 25px 10px 10px;
-  border-radius: 3px;
-  width: 100%;
-  box-sizing: border-box;
-}
-#Tab-divs .container .left .neckline .input-div i {
-  transform: translateY(-50%);
-  top: 50%;
-  right: 10px;
-  position: absolute;
-  font-size: 24px;
-  line-height: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  color: #8c8c8c;
   font-size: 20px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  transition: all 0.3s;
-  user-select: none;
-  opacity: 1;
-  cursor: pointer;
-  border: 0;
-  background: 0 0;
-  outline: 0;
+  font-weight: 500;
 }
 #Tab-divs .container .left #neckline-sub {
   display: grid;
@@ -210,45 +173,8 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left .silhouette .name-div span {
-  font-weight: bold;
-}
-#Tab-divs .container .left .silhouette .input-div {
-  position: relative;
-}
-#Tab-divs .container .left .silhouette .input-div input {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  border: 1px solid #d9d9d9;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-  display: block;
-  padding: 10px 25px 10px 10px;
-  border-radius: 3px;
-  width: 100%;
-  box-sizing: border-box;
-}
-#Tab-divs .container .left .silhouette .input-div i {
-  transform: translateY(-50%);
-  top: 50%;
-  right: 10px;
-  position: absolute;
-  font-size: 24px;
-  line-height: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  color: #8c8c8c;
   font-size: 20px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  transition: all 0.3s;
-  user-select: none;
-  opacity: 1;
-  cursor: pointer;
-  border: 0;
-  background: 0 0;
-  outline: 0;
+  font-weight: 500;
 }
 #Tab-divs .container .left #silhouette-sub {
   display: grid;
@@ -285,7 +211,8 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left .color .name-div span {
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 500;
 }
 #Tab-divs .container .left .color .input-div {
   position: relative;
@@ -295,10 +222,9 @@ body {
   line-height: 21px;
   font-weight: 400;
   border: 1px solid #d9d9d9;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   display: block;
-  padding: 10px 25px 10px 10px;
-  border-radius: 3px;
+  padding: 5px 25px 5px 10px;
+  border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -354,7 +280,8 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left .fabric .name-div span {
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 500;
 }
 #Tab-divs .container .left .fabric .input-div {
   position: relative;
@@ -364,10 +291,9 @@ body {
   line-height: 21px;
   font-weight: 400;
   border: 1px solid #d9d9d9;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   display: block;
-  padding: 10px 25px 10px 10px;
-  border-radius: 3px;
+  padding: 5px 25px 5px 10px;
+  border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -399,7 +325,6 @@ body {
   max-height: 230px;
   transition: 0.3s;
   border-bottom: 1px solid #d9d9d9;
-  margin-top: 20px;
 }
 #Tab-divs .container .left #fabric-sub ul {
   padding: 5px 0 10px;
@@ -419,7 +344,8 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left .price span {
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 500;
 }
 #Tab-divs .container .left #price-sub {
   width: 100%;
@@ -527,7 +453,7 @@ body {
   box-shadow: 0px 3px 3px #eeeeee;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 280px auto;
+  grid-template-rows: 300px auto;
   transition: 0.3s;
 }
 #Tab-divs .container .right .Cards .inner-container .card.bridal:hover {
@@ -577,7 +503,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .right .Cards .inner-container .card.bridal img {
-  height: 280px;
+  height: 300px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
