@@ -395,6 +395,7 @@ body{
                             border-radius: 5px;
                             text-align: center;
                             border: 1px solid #999;
+                            -moz-appearance: textfield;
                         }
                     }
                     input[type="number"] {
@@ -430,6 +431,8 @@ body{
                         top: -5px;
                         background: none;
                         pointer-events: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
                     }
                     input[type="range"] {
                         &::-webkit-slider-thumb {

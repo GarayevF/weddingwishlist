@@ -390,6 +390,7 @@ body {
   border-radius: 5px;
   text-align: center;
   border: 1px solid #999;
+  -moz-appearance: textfield;
 }
 #Tab-divs .container .left #price-sub .price-input input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -422,6 +423,8 @@ body {
   top: -5px;
   background: none;
   pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 #Tab-divs .container .left #price-sub .range-input input[type=range]::-webkit-slider-thumb {
   height: 17px;
