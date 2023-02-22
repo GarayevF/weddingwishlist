@@ -9,6 +9,11 @@ a {
   color: unset;
 }
 
+.noscrollbar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 h1, h2, h3, h4, h5, h6,
 p, span, a, li, button, input {
   font-family: "Poppins", sans-serif;
@@ -114,6 +119,9 @@ body {
 #Tab-divs .container .left #gallery-sub ul {
   border-bottom: 1px solid #d9d9d9;
   padding: 5px 0 10px;
+}
+#Tab-divs .container .left #gallery-sub ul li {
+  list-style-type: none;
 }
 #Tab-divs .container .left #gallery-sub ul li a {
   display: flex;
@@ -382,7 +390,6 @@ body {
   border-radius: 5px;
   text-align: center;
   border: 1px solid #999;
-  -moz-appearance: textfield;
 }
 #Tab-divs .container .left #price-sub .price-input input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -415,8 +422,6 @@ body {
   top: -5px;
   background: none;
   pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 #Tab-divs .container .left #price-sub .range-input input[type=range]::-webkit-slider-thumb {
   height: 17px;
@@ -530,7 +535,7 @@ body {
 #Tab-divs .container .right .Cards .inner-container .card.bridal .card-body .card-title {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 500;
   -webkit-text-decoration: none solid rgb(36, 36, 36);
           text-decoration: none solid rgb(36, 36, 36);
   color: #242424;

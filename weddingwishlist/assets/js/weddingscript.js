@@ -7,7 +7,10 @@ gallery.addEventListener('click', function(){
     let hght = subgallery.scrollHeight;
 
     if (subgallery.classList.contains('active')) {
-        subgallery.style.height = hght + 'px';        
+        subgallery.style.height = hght + 'px';
+        if (hght <= 230) {
+            subgallery.classList.add('noscrollbar');
+        }     
     }else{
         subgallery.style.height = 0 + 'px';
     }
@@ -19,7 +22,16 @@ let color_search = document.querySelector('#Tab-divs .left .color .input-div inp
 let color_close = document.querySelector('#Tab-divs .left .color .input-div i');
 let colorIsClicked = false
 
-document.querySelector('#color-sub').style.height = (document.querySelector('#color-sub').scrollHeight + 1) + 'px';
+document.querySelector('#color-sub').style.height = (document.querySelector('#color-sub').scrollHeight) + 'px';
+if (document.querySelector('#color-sub').scrollHeight > 230) {
+    if (document.querySelector('#color-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#color-sub').classList.remove('noscrollbar')
+    }
+}else{
+    if (!document.querySelector('#color-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#color-sub').classList.add('noscrollbar')
+    }
+}
 
 color_close.addEventListener('mousedown', function(e){
     color_search.value = '';
@@ -47,7 +59,7 @@ color.addEventListener('mousedown', function(e){
         subcolor.style.marginTop = '0';
         color_search.focus()
     }else{
-        subcolor.style.height = 1 + 'px';
+        subcolor.style.height = 0 + 'px';
         subcolor.style.marginTop = '20px';
         color_search.blur()
     }
@@ -73,7 +85,7 @@ color_search.addEventListener('blur', function(){
             subcolor.classList.remove('active');
         }
         
-        subcolor.style.height = 1 + 'px';
+        subcolor.style.height = 0 + 'px';
         subcolor.style.marginTop = '20px';
     }else{
         colorIsClicked = false
@@ -97,7 +109,7 @@ color_search.addEventListener('keyup', function(){
     }
     
     let subcolor = document.querySelector('#color-sub');
-    subcolor.style.height = ul.scrollHeight + 'px';
+    subcolor.style.height = (ul.scrollHeight+1) + 'px';
     
 })
 
@@ -106,7 +118,16 @@ let fabric_search = document.querySelector('#Tab-divs .left .fabric .input-div i
 let fabric_close = document.querySelector('#Tab-divs .left .fabric .input-div i');
 let fabricIsClicked = false
 
-document.querySelector('#fabric-sub').style.height = (document.querySelector('#fabric-sub').scrollHeight + 1) + 'px';
+document.querySelector('#fabric-sub').style.height = (document.querySelector('#fabric-sub').scrollHeight) + 'px';
+if (document.querySelector('#fabric-sub').scrollHeight > 230) {
+    if (document.querySelector('#fabric-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#fabric-sub').classList.remove('noscrollbar')
+    }
+}else{
+    if (!document.querySelector('#fabric-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#fabric-sub').classList.add('noscrollbar')
+    }
+}
 
 fabric_close.addEventListener('mousedown', function(e){
     fabric_search.value = '';
@@ -134,7 +155,7 @@ fabric.addEventListener('mousedown', function(e){
         subfabric.style.marginTop = '0';
         fabric_search.focus()
     }else{
-        subfabric.style.height = 1 + 'px';
+        subfabric.style.height = 0 + 'px';
         subfabric.style.marginTop = '20px';
         fabric_search.blur()
     }
@@ -160,7 +181,7 @@ fabric_search.addEventListener('blur', function(){
             subfabric.classList.remove('active');
         }
         
-        subfabric.style.height = 1 + 'px';
+        subfabric.style.height = 0 + 'px';
         subfabric.style.marginTop = '20px';
     }else{
         fabricIsClicked = false
@@ -184,7 +205,7 @@ fabric_search.addEventListener('keyup', function(){
     }
     
     let subfabric = document.querySelector('#fabric-sub');
-    subfabric.style.height = ul.scrollHeight + 'px';
+    subfabric.style.height = (ul.scrollHeight+1) + 'px';
     
 })
 
@@ -192,7 +213,17 @@ fabric_search.addEventListener('keyup', function(){
 
 
 let neckline = document.querySelector('#Tab-divs .left .neckline');
-document.querySelector('#neckline-sub').style.height = (document.querySelector('#neckline-sub').scrollHeight + 1) + 'px';
+
+document.querySelector('#neckline-sub').style.height = (document.querySelector('#neckline-sub').scrollHeight) + 'px';
+if (document.querySelector('#neckline-sub').scrollHeight > 230) {
+    if (document.querySelector('#neckline-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#neckline-sub').classList.remove('noscrollbar')
+    }
+}else{
+    if (!document.querySelector('#neckline-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#neckline-sub').classList.add('noscrollbar')
+    }
+}
 
 neckline.addEventListener('click', function(){
     let subneckline = document.querySelector('#neckline-sub');
@@ -208,12 +239,21 @@ neckline.addEventListener('click', function(){
         }
         
     }else{
-        subneckline.style.height = 1 + 'px';
+        subneckline.style.height = 0 + 'px';
     }
 })
 
 let silhouette = document.querySelector('#Tab-divs .left .silhouette');
-document.querySelector('#silhouette-sub').style.height = (document.querySelector('#silhouette-sub').scrollHeight + 1) + 'px';
+document.querySelector('#silhouette-sub').style.height = (document.querySelector('#silhouette-sub').scrollHeight) + 'px';
+if (document.querySelector('#silhouette-sub').scrollHeight > 230) {
+    if (document.querySelector('#silhouette-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#silhouette-sub').classList.remove('noscrollbar')
+    }
+}else{
+    if (!document.querySelector('#silhouette-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#silhouette-sub').classList.add('noscrollbar')
+    }
+}
 
 silhouette.addEventListener('click', function(){
     let subsilhouette = document.querySelector('#silhouette-sub');
@@ -230,7 +270,7 @@ silhouette.addEventListener('click', function(){
         
         
     }else{
-        subsilhouette.style.height = 1 + 'px';
+        subsilhouette.style.height = 0 + 'px';
     }
 })
 
@@ -284,7 +324,16 @@ rangeInput.forEach(input =>{
 });
 
 let price = document.querySelector('#Tab-divs .left .price');
-document.querySelector('#price-sub').style.height = (document.querySelector('#price-sub').scrollHeight + 1) + 'px';
+document.querySelector('#price-sub').style.height = (document.querySelector('#price-sub').scrollHeight) + 'px';
+if (document.querySelector('#price-sub').scrollHeight > 230) {
+    if (document.querySelector('#price-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#price-sub').classList.remove('noscrollbar')
+    }
+}else{
+    if (!document.querySelector('#price-sub').classList.contains('noscrollbar')) {
+        document.querySelector('#price-sub').classList.add('noscrollbar')
+    }
+}
 
 price.addEventListener('click', function(){
     let subprice = document.querySelector('#price-sub');
@@ -299,6 +348,6 @@ price.addEventListener('click', function(){
             subprice.style.height = (hght + 1) + 'px';
         }
     }else{
-        subprice.style.height = 1 + 'px';
+        subprice.style.height = 0 + 'px';
     }
 })
