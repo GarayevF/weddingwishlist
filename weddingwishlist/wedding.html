@@ -13,7 +13,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="/assets/css/Wedding/weddingdesign.css">
+        <link rel="stylesheet" href="/assets/css/weddingdesign.css">
         <title>Document</title>
     </head>
     <body>
@@ -129,6 +129,9 @@
         <section id="Tab-divs">
             <div class="container">
                 <div class="left">
+                    <div id="close-div">
+                        <span id="close-sidebar">Bağla <i class="fa-solid fa-xmark"></i></span>
+                    </div>
                     <div class="gallery">
                         <p><span>Gəlinlik</span><br>Qalereyası</p>
                         <div class="icon-div">
@@ -370,7 +373,7 @@
                               <span>Min</span>
                               <input type="number" class="input-min" value="0">
                             </div>
-                            <div class="separator">-</div>
+                            <div class="separator"></div>
                             <div class="field">
                               <span>Maks</span>
                               <input type="number" class="input-max" value="7000">
@@ -388,6 +391,19 @@
 
 
                 <div class="right">
+                    <div class="upper-cards-div">
+                        <p id="searchresulttext">Axtarışa uyğun <span id="resultcount">5</span> nəticə tapıldı</p>
+                        <i id="opensidebar" class="fa-solid fa-sliders"></i>
+                        <div class="dropdown">
+                            <button class="dropbtn"><span>Sıralama</span> <i class="fa-solid fa-chevron-left"></i></button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#">Ucuzdan bahaya</a>
+                                <a href="#">Bahadan ucuza</a>
+                                <a href="#">Yenidən köhnəyə</a>
+                                <a href="#">Köhnədən yeniyə</a>
+                            </div>
+                          </div>
+                    </div>
                     <div class="all element" data-id="all">
                         <div class="Cards" id="Cards-div">
                             <div class="inner-container">

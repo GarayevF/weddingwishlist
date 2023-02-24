@@ -77,6 +77,9 @@ body {
 #Tab-divs .container .element {
   display: none;
 }
+#Tab-divs .container .Cards {
+  padding: 2rem 0 0 0;
+}
 #Tab-divs .container .Cards .inner-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

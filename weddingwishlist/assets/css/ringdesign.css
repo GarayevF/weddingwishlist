@@ -9,11 +9,6 @@ a {
   color: unset;
 }
 
-.noscrollbar::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
 h1, h2, h3, h4, h5, h6,
 p, span, a, li, button, input {
   font-family: "Poppins", sans-serif;
@@ -85,26 +80,10 @@ body {
 #Tab-divs .container {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 260px auto;
-  -moz-column-gap: 35px;
-       column-gap: 35px;
+  grid-template-columns: 0.9fr 3fr;
 }
 #Tab-divs .container .left {
-  width: 260px;
-  margin: 0 35px 0 0;
-  transition: 0.4s;
-}
-#Tab-divs .container .left #close-div {
-  display: none;
-  align-items: center;
-  padding: 1.5rem 15px 3rem;
-  justify-content: end;
-}
-#Tab-divs .container .left #close-div span {
-  cursor: pointer;
-}
-#Tab-divs .container .left #close-div span i {
-  margin-left: 5px;
+  padding: 0 35px 0 0;
 }
 #Tab-divs .container .left .gallery {
   display: flex;
@@ -119,7 +98,7 @@ body {
 }
 #Tab-divs .container .left .gallery p span {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
 }
 #Tab-divs .container .left .gallery .icon-div {
   display: flex;
@@ -128,7 +107,7 @@ body {
   gap: 5px;
 }
 #Tab-divs .container .left #gallery-sub {
-  overflow-y: scroll;
+  overflow: scroll;
   height: 0px;
   transition: 0.3s;
 }
@@ -137,9 +116,6 @@ body {
   padding: 5px 0 10px;
 }
 #Tab-divs .container .left #gallery-sub ul li {
-  list-style-type: none;
-}
-#Tab-divs .container .left #gallery-sub ul li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,149 +123,54 @@ body {
   list-style-type: none;
   cursor: pointer;
 }
-#Tab-divs .container .left #gallery-sub ul li a span {
-  font-size: 15px;
-}
-#Tab-divs .container .left .neckline {
-  display: flex;
-  flex-direction: column;
-}
-#Tab-divs .container .left .neckline .name-div {
+#Tab-divs .container .left .gender {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
   cursor: pointer;
 }
-#Tab-divs .container .left .neckline .name-div span {
-  font-size: 18px;
-  font-weight: 500;
+#Tab-divs .container .left .gender span {
+  font-weight: bold;
 }
-#Tab-divs .container .left #neckline-sub {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+#Tab-divs .container .left #gender-sub {
+  overflow: hidden;
+  height: 0px;
   max-height: 230px;
-  overflow-y: auto;
   transition: 0.3s;
   border-bottom: 1px solid #d9d9d9;
-  padding: 0 1.5rem;
-  gap: 1.5rem;
 }
-#Tab-divs .container .left #neckline-sub .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
-  padding: 10px 0;
-  border-radius: 4px;
-  cursor: pointer;
+#Tab-divs .container .left #gender-sub ul {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0 10px;
 }
-#Tab-divs .container .left #neckline-sub .item:hover {
-  background-color: rgb(238, 208, 238);
-}
-#Tab-divs .container .left #neckline-sub .item span {
-  font-size: 12px;
-}
-#Tab-divs .container .left .silhouette {
-  display: flex;
-  flex-direction: column;
-}
-#Tab-divs .container .left .silhouette .name-div {
+#Tab-divs .container .left #gender-sub ul li {
+  list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 12px 0;
   cursor: pointer;
-}
-#Tab-divs .container .left .silhouette .name-div span {
-  font-size: 18px;
-  font-weight: 500;
-}
-#Tab-divs .container .left #silhouette-sub {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-height: 230px;
-  overflow-y: auto;
-  transition: 0.3s;
-  border-bottom: 1px solid #d9d9d9;
-  padding: 0 1.5rem;
-  gap: 1.5rem;
-}
-#Tab-divs .container .left #silhouette-sub .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
-  padding: 10px 0;
-  border-radius: 4px;
-  cursor: pointer;
-}
-#Tab-divs .container .left #silhouette-sub .item:hover {
-  background-color: rgb(238, 208, 238);
-}
-#Tab-divs .container .left #silhouette-sub .item span {
-  font-size: 12px;
 }
 #Tab-divs .container .left .color {
   display: flex;
-  flex-direction: column;
-}
-#Tab-divs .container .left .color .name-div {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
   cursor: pointer;
 }
-#Tab-divs .container .left .color .name-div span {
-  font-size: 18px;
-  font-weight: 500;
-}
-#Tab-divs .container .left .color .input-div {
-  position: relative;
-}
-#Tab-divs .container .left .color .input-div input {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  border: 1px solid #d9d9d9;
-  display: block;
-  padding: 5px 25px 5px 10px;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-}
-#Tab-divs .container .left .color .input-div i {
-  transform: translateY(-50%);
-  top: 50%;
-  right: 10px;
-  position: absolute;
-  font-size: 24px;
-  line-height: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  color: #8c8c8c;
-  font-size: 20px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  transition: all 0.3s;
-  user-select: none;
-  opacity: 1;
-  cursor: pointer;
-  border: 0;
-  background: 0 0;
-  outline: 0;
+#Tab-divs .container .left .color span {
+  font-weight: bold;
 }
 #Tab-divs .container .left #color-sub {
-  overflow-y: auto;
+  overflow: hidden;
+  height: 0px;
   max-height: 230px;
   transition: 0.3s;
   border-bottom: 1px solid #d9d9d9;
-  background-color: transparent;
 }
 #Tab-divs .container .left #color-sub ul {
+  border-bottom: 1px solid #d9d9d9;
   padding: 5px 0 10px;
 }
 #Tab-divs .container .left #color-sub ul li {
@@ -299,9 +180,6 @@ body {
   align-items: center;
   padding: 12px 0;
   cursor: pointer;
-}
-#Tab-divs .container .left #color-sub ul li span {
-  font-size: 15px;
 }
 #Tab-divs .container .left .fabric {
   display: flex;
@@ -315,8 +193,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left .fabric .name-div span {
-  font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
 }
 #Tab-divs .container .left .fabric .input-div {
   position: relative;
@@ -326,9 +203,10 @@ body {
   line-height: 21px;
   font-weight: 400;
   border: 1px solid #d9d9d9;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   display: block;
-  padding: 5px 25px 5px 10px;
-  border-radius: 5px;
+  padding: 10px 25px 10px 10px;
+  border-radius: 3px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -356,10 +234,12 @@ body {
   outline: 0;
 }
 #Tab-divs .container .left #fabric-sub {
-  overflow-y: auto;
+  overflow: hidden;
+  height: 0px;
   max-height: 230px;
   transition: 0.3s;
   border-bottom: 1px solid #d9d9d9;
+  margin-top: 20px;
 }
 #Tab-divs .container .left #fabric-sub ul {
   padding: 5px 0 10px;
@@ -371,183 +251,8 @@ body {
   padding: 12px 0;
   cursor: pointer;
 }
-#Tab-divs .container .left #fabric-sub ul li span {
-  font-size: 15px;
-}
-#Tab-divs .container .left .price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  cursor: pointer;
-}
-#Tab-divs .container .left .price span {
-  font-size: 18px;
-  font-weight: 500;
-}
-#Tab-divs .container .left #price-sub {
-  width: 100%;
-  background: #fff;
-  max-height: 230px;
-  transition: 0.3s;
-  border-bottom: 1px solid #d9d9d9;
-  overflow-y: auto;
-}
-#Tab-divs .container .left #price-sub .price-input {
-  width: 100%;
-  display: flex;
-  margin: 10px 0 35px;
-}
-#Tab-divs .container .left #price-sub .price-input .field {
-  display: flex;
-  width: 100%;
-  height: 45px;
-  align-items: center;
-}
-#Tab-divs .container .left #price-sub .price-input .separator {
-  width: 70px;
-  display: flex;
-  font-size: 19px;
-  align-items: center;
-  justify-content: center;
-}
-#Tab-divs .container .left #price-sub .price-input .field input {
-  width: 60px;
-  padding: 5px;
-  outline: none;
-  font-size: 15px;
-  margin-left: 12px;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid #999;
-  -moz-appearance: textfield;
-}
-#Tab-divs .container .left #price-sub .price-input input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-#Tab-divs .container .left #price-sub .price-input input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-#Tab-divs .container .left #price-sub .slider {
-  height: 3px;
-  position: relative;
-  background: #ddd;
-  border-radius: 5px;
-}
-#Tab-divs .container .left #price-sub .slider .progress {
-  height: 100%;
-  left: 0%;
-  right: 0%;
-  position: absolute;
-  border-radius: 5px;
-  background: #17A2B8;
-}
-#Tab-divs .container .left #price-sub .range-input {
-  position: relative;
-  margin-bottom: 20px;
-}
-#Tab-divs .container .left #price-sub .range-input input {
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  top: -4px;
-  background: none;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-#Tab-divs .container .left #price-sub .range-input input[type=range]::-webkit-slider-thumb {
-  height: 17px;
-  width: 17px;
-  border-radius: 50%;
-  background: #17A2B8;
-  pointer-events: auto;
-  -webkit-appearance: none;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-}
-#Tab-divs .container .left #price-sub .range-input input[type=range]::-moz-range-thumb {
-  height: 17px;
-  width: 17px;
-  border: none;
-  border-radius: 50%;
-  background: #17A2B8;
-  pointer-events: auto;
-  -moz-appearance: none;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-}
 #Tab-divs .container .right .element {
   display: grid;
-}
-#Tab-divs .container .right .upper-cards-div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-#Tab-divs .container .right .upper-cards-div #searchresulttext {
-  color: gray;
-}
-#Tab-divs .container .right .upper-cards-div .fa-solid.fa-sliders {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #000;
-  border: 2px solid #000;
-  background: #fff;
-  padding: 10px;
-  transition: 0.3s;
-}
-#Tab-divs .container .right .upper-cards-div .fa-solid.fa-sliders:hover {
-  background-color: #000;
-  color: #fff;
-}
-#Tab-divs .container .right .upper-cards-div .dropdown {
-  position: relative;
-  display: inline-block;
-}
-#Tab-divs .container .right .upper-cards-div .dropdown .dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 10px 1rem;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#Tab-divs .container .right .upper-cards-div .dropdown .dropbtn span {
-  pointer-events: none;
-}
-#Tab-divs .container .right .upper-cards-div .dropdown .dropbtn i {
-  transition: 0.4s;
-  pointer-events: none;
-}
-#Tab-divs .container .right .upper-cards-div .dropdown .dropbtn:hover {
-  background-color: #2980B9;
-}
-#Tab-divs .container .right .upper-cards-div .dropdown .dropdown-content {
-  display: block;
-  position: absolute;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  width: 100%;
-  height: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  transition: 0.4s;
-  border-radius: 8px;
-}
-#Tab-divs .container .right .upper-cards-div .dropdown .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-#Tab-divs .container .right .upper-cards-div .dropdown .dropdown-content a:hover {
-  background-color: #ddd;
 }
 #Tab-divs .container .right .Cards .inner-container {
   display: grid;
@@ -562,7 +267,7 @@ body {
   box-shadow: 0px 3px 3px #eeeeee;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 300px auto;
+  grid-template-rows: 240px auto;
   transition: 0.3s;
 }
 #Tab-divs .container .right .Cards .inner-container .card.bridal:hover {
@@ -612,7 +317,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .right .Cards .inner-container .card.bridal img {
-  height: 300px;
+  height: 240px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -638,8 +343,8 @@ body {
 }
 #Tab-divs .container .right .Cards .inner-container .card.bridal .card-body .card-title {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 900;
   -webkit-text-decoration: none solid rgb(36, 36, 36);
           text-decoration: none solid rgb(36, 36, 36);
   color: #242424;
@@ -714,24 +419,8 @@ body {
   #Tab-divs #Cards-div .inner-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  #Tab-divs #Cards-div .inner-container .card {
-    grid-template-rows: 360px auto;
-  }
-  #Tab-divs #Cards-div .inner-container .card img {
-    height: 360px;
-  }
 }
 @media (max-width: 600px) {
-  #Categories .container {
-    padding: 2rem 0 2rem;
-  }
-  #Categories .container .all-items-div {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-  }
-  #Categories .container .all-items-div a span {
-    font-size: 14px !important;
-  }
   #All-tab {
     padding: 1rem 0;
   }
@@ -753,11 +442,11 @@ body {
     gap: 10px;
   }
   #Tab-divs #Cards-div .inner-container .card {
-    grid-template-rows: 280px auto;
+    grid-template-rows: 160px auto;
     border-radius: 8px;
   }
   #Tab-divs #Cards-div .inner-container .card img {
-    height: 280px;
+    height: 160px;
   }
   #Tab-divs #Cards-div .inner-container .card .card-body {
     padding: 4px 8px;
@@ -779,32 +468,6 @@ body {
   }
 }
 @media (max-width: 1300px) {
-  #Tab-divs .container {
-    grid-template-columns: auto;
-  }
-  #Tab-divs .container .left {
-    overflow-y: scroll;
-    padding-bottom: 3rem !important;
-    margin: 0;
-    height: 100%;
-    width: 320px;
-    position: fixed;
-    left: -320px;
-    top: 0;
-    z-index: 999;
-    padding: 0 40px;
-    background-color: #fff;
-    box-shadow: 0 1px 12px 2px hsla(0deg, 0%, 56%, 0.3);
-  }
-  #Tab-divs .container .left #close-div {
-    display: flex;
-  }
-  #Tab-divs .container .right #opensidebar {
-    display: inline-block;
-  }
-  #Tab-divs .container .right #searchresulttext {
-    display: none;
-  }
   #Cards-div .inner-container .card .card-body .details {
     flex-direction: column;
     align-items: flex-start;
@@ -832,4 +495,4 @@ body {
   #Tab-divs #Cards-div .inner-container .card .card-body .details .left i, #Tab-divs #Cards-div .inner-container .card .card-body .details .right i {
     text-align: center;
   }
-}/*# sourceMappingURL=weddingdesign.css.map */
+}/*# sourceMappingURL=ringdesign.css.map */

@@ -351,3 +351,49 @@ price.addEventListener('click', function(){
         subprice.style.height = 0 + 'px';
     }
 })
+
+let dropbtn = document.querySelector('.dropbtn');
+let dropbtnicon = document.querySelector('#Tab-divs .right .upper-cards-div .dropdown .dropbtn i');
+let dropdown = document.querySelector("#myDropdown")
+
+dropbtn.addEventListener('click', function(){
+    dropdown.classList.toggle("show");
+    if (dropdown.classList.contains('show')) {
+        dropbtnicon.style.transform = "rotate(-90deg)"
+        dropdown.style.height = dropdown.scrollHeight + 'px';
+    }else{
+        dropbtnicon.style.transform = "rotate(0deg)"
+        dropdown.style.height = '0px';
+    }
+})
+  
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        dropbtnicon.style.transform = "rotate(0deg)"
+        dropdown.style.height = '0px';
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    }
+}
+
+
+let opensidebar = document.querySelector('#opensidebar');
+let leftside = document.querySelector('#Tab-divs .left')
+let closesidebar = document.querySelector('#close-sidebar')
+
+opensidebar.addEventListener('click', function(){
+    leftside.classList.toggle('active-sidebar');
+    if (leftside.classList.contains('active-sidebar')) {
+        leftside.style.left = '0px'
+    }else{
+        leftside.style.left = '-320px'
+    }
+})
+
+closesidebar.addEventListener('click', function() {
+    if (leftside.classList.contains('active-sidebar')) {
+        leftside.classList.remove('active-sidebar');
+    }
+    leftside.style.left = '-320px'
+})
