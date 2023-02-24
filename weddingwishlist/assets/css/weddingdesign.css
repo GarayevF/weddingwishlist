@@ -27,41 +27,6 @@ body {
   padding: 0 5rem;
 }
 
-.All-tab {
-  padding: 2rem 0;
-}
-.All-tab .container .all-tab-title .title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 1rem;
-}
-.All-tab .container .all-tab-div {
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: 1px solid rgb(200, 204, 207);
-  border-radius: 0.5em;
-}
-.All-tab .container .all-tab-div .active {
-  background-color: #fff;
-  color: black;
-}
-.All-tab .container .all-tab-div button {
-  outline: none;
-  cursor: pointer;
-  border: none;
-  padding: 10px 1rem;
-  background: rgb(240, 244, 247);
-  color: grey;
-  font-size: 18px;
-}
-.All-tab .container .all-tab-div button:not(:first-child):not(:last-child) {
-  border-left: 1px solid rgb(200, 204, 207);
-  border-right: 1px solid rgb(200, 204, 207);
-}
-
 #Categories .container {
   padding: 2rem 0 4rem;
 }
@@ -97,7 +62,7 @@ body {
 #Tab-divs .container .left #close-div {
   display: none;
   align-items: center;
-  padding: 1.5rem 15px 3rem;
+  padding: 1.5rem 0 3rem 15px;
   justify-content: end;
 }
 #Tab-divs .container .left #close-div span {
@@ -508,12 +473,12 @@ body {
 #Tab-divs .container .right .upper-cards-div .dropdown .dropbtn {
   background-color: #3498DB;
   color: white;
-  padding: 10px 1rem;
-  font-size: 16px;
+  padding: 5px 1rem;
+  font-size: 14px;
   border: none;
   cursor: pointer;
   border-radius: 8px;
-  width: 200px;
+  width: 170px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -542,9 +507,10 @@ body {
 }
 #Tab-divs .container .right .upper-cards-div .dropdown .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 8px 16px;
   text-decoration: none;
   display: block;
+  font-size: 14px;
 }
 #Tab-divs .container .right .upper-cards-div .dropdown .dropdown-content a:hover {
   background-color: #ddd;
@@ -710,6 +676,18 @@ body {
 @media (max-width: 768px) {
   .container {
     padding: 0 10px;
+  }
+  #Tab-divs .left .gallery p {
+    font-size: 12px !important;
+  }
+  #Tab-divs .left .gallery p span {
+    font-size: 16px !important;
+  }
+  #Tab-divs .left .neckline .name-div span, #Tab-divs .left .silhouette .name-div span, #Tab-divs .left .color .name-div span, #Tab-divs .left .fabric .name-div span {
+    font-size: 16px !important;
+  }
+  #Tab-divs .left .price span {
+    font-size: 16px !important;
   }
   #Tab-divs #Cards-div .inner-container {
     grid-template-columns: repeat(2, 1fr);

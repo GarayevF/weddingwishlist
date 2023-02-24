@@ -77,21 +77,21 @@ color_search.addEventListener('focus', function(){
 
 })
 
-color_search.addEventListener('blur', function(){
-    if (!colorIsClicked) {
-        let subcolor = document.querySelector('#color-sub');
+// color_search.addEventListener('blur', function(){
+//     if (!colorIsClicked) {
+//         let subcolor = document.querySelector('#color-sub');
 
-        if (subcolor.classList.contains('active')){
-            subcolor.classList.remove('active');
-        }
+//         if (subcolor.classList.contains('active')){
+//             subcolor.classList.remove('active');
+//         }
         
-        subcolor.style.height = 0 + 'px';
-        subcolor.style.marginTop = '20px';
-    }else{
-        colorIsClicked = false
-        color_search.focus()
-    }
-})
+//         subcolor.style.height = 0 + 'px';
+//         subcolor.style.marginTop = '20px';
+//     }else{
+//         colorIsClicked = false
+//         color_search.focus()
+//     }
+// })
 
 color_search.addEventListener('keyup', function(){
     let filter = color_search.value.toUpperCase();
@@ -173,21 +173,21 @@ fabric_search.addEventListener('focus', function(){
 
 })
 
-fabric_search.addEventListener('blur', function(){
-    if (!fabricIsClicked) {
-        let subfabric = document.querySelector('#fabric-sub');
+// fabric_search.addEventListener('blur', function(){
+//     if (!fabricIsClicked) {
+//         let subfabric = document.querySelector('#fabric-sub');
 
-        if (subfabric.classList.contains('active')){
-            subfabric.classList.remove('active');
-        }
+//         if (subfabric.classList.contains('active')){
+//             subfabric.classList.remove('active');
+//         }
         
-        subfabric.style.height = 0 + 'px';
-        subfabric.style.marginTop = '20px';
-    }else{
-        fabricIsClicked = false
-        fabric_search.focus()
-    }
-})
+//         subfabric.style.height = 0 + 'px';
+//         subfabric.style.marginTop = '20px';
+//     }else{
+//         fabricIsClicked = false
+//         fabric_search.focus()
+//     }
+// })
 
 fabric_search.addEventListener('keyup', function(){
     let filter = fabric_search.value.toUpperCase();
