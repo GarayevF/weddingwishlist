@@ -22,7 +22,7 @@ let color_search = document.querySelector('#Tab-divs .left .color .input-div inp
 let color_close = document.querySelector('#Tab-divs .left .color .input-div i');
 let colorIsClicked = false
 
-document.querySelector('#color-sub').style.height = (document.querySelector('#color-sub').scrollHeight) + 'px';
+document.querySelector('#color-sub').style.height = (document.querySelector('#color-sub').scrollHeight + 1) + 'px';
 if (document.querySelector('#color-sub').scrollHeight > 230) {
     if (document.querySelector('#color-sub').classList.contains('noscrollbar')) {
         document.querySelector('#color-sub').classList.remove('noscrollbar')
@@ -45,7 +45,7 @@ color_close.addEventListener('mousedown', function(e){
     let subcolor = document.querySelector('#color-sub');
     let hght = subcolor.scrollHeight;
     subcolor.style.height = (hght + 1) + 'px';
-    subcolor.style.marginTop = '0';
+    
     color_search.focus();
 })
 
@@ -56,11 +56,11 @@ color.addEventListener('mousedown', function(e){
     let hght = subcolor.scrollHeight;
     if (subcolor.classList.contains('active')){
         subcolor.style.height = (hght + 1) + 'px';
-        subcolor.style.marginTop = '0';
+        
         color_search.focus()
     }else{
         subcolor.style.height = 0 + 'px';
-        subcolor.style.marginTop = '20px';
+        
         color_search.blur()
     }
     
@@ -73,25 +73,10 @@ color_search.addEventListener('focus', function(){
         subcolor.classList.add('active');
     }
     subcolor.style.height = (hght + 1) + 'px';
-    subcolor.style.marginTop = '0';
+    
 
 })
 
-// color_search.addEventListener('blur', function(){
-//     if (!colorIsClicked) {
-//         let subcolor = document.querySelector('#color-sub');
-
-//         if (subcolor.classList.contains('active')){
-//             subcolor.classList.remove('active');
-//         }
-        
-//         subcolor.style.height = 0 + 'px';
-//         subcolor.style.marginTop = '20px';
-//     }else{
-//         colorIsClicked = false
-//         color_search.focus()
-//     }
-// })
 
 color_search.addEventListener('keyup', function(){
     let filter = color_search.value.toUpperCase();
@@ -121,7 +106,7 @@ let fabric_search = document.querySelector('#Tab-divs .left .fabric .input-div i
 let fabric_close = document.querySelector('#Tab-divs .left .fabric .input-div i');
 let fabricIsClicked = false
 
-document.querySelector('#fabric-sub').style.height = (document.querySelector('#fabric-sub').scrollHeight) + 'px';
+document.querySelector('#fabric-sub').style.height = (document.querySelector('#fabric-sub').scrollHeight + 1) + 'px';
 if (document.querySelector('#fabric-sub').scrollHeight > 230) {
     if (document.querySelector('#fabric-sub').classList.contains('noscrollbar')) {
         document.querySelector('#fabric-sub').classList.remove('noscrollbar')
@@ -144,7 +129,7 @@ fabric_close.addEventListener('mousedown', function(e){
     let subfabric = document.querySelector('#fabric-sub');
     let hght = subfabric.scrollHeight;
     subfabric.style.height = (hght + 1) + 'px';
-    subfabric.style.marginTop = '0';
+    
     fabric_search.focus();
 })
 
@@ -155,11 +140,11 @@ fabric.addEventListener('mousedown', function(e){
     let hght = subfabric.scrollHeight;
     if (subfabric.classList.contains('active')){
         subfabric.style.height = (hght + 1) + 'px';
-        subfabric.style.marginTop = '0';
+        
         fabric_search.focus()
     }else{
         subfabric.style.height = 0 + 'px';
-        subfabric.style.marginTop = '20px';
+        
         fabric_search.blur()
     }
     
@@ -172,25 +157,9 @@ fabric_search.addEventListener('focus', function(){
         subfabric.classList.add('active');
     }
     subfabric.style.height = (hght + 1) + 'px';
-    subfabric.style.marginTop = '0';
+    
 
 })
-
-// fabric_search.addEventListener('blur', function(){
-//     if (!fabricIsClicked) {
-//         let subfabric = document.querySelector('#fabric-sub');
-
-//         if (subfabric.classList.contains('active')){
-//             subfabric.classList.remove('active');
-//         }
-        
-//         subfabric.style.height = 0 + 'px';
-//         subfabric.style.marginTop = '20px';
-//     }else{
-//         fabricIsClicked = false
-//         fabric_search.focus()
-//     }
-// })
 
 fabric_search.addEventListener('keyup', function(){
     let filter = fabric_search.value.toUpperCase();
@@ -262,7 +231,7 @@ rangeInput.forEach(input =>{
 });
 
 let price = document.querySelector('#Tab-divs .left .price');
-document.querySelector('#price-sub').style.height = (document.querySelector('#price-sub').scrollHeight) + 'px';
+document.querySelector('#price-sub').style.height = (document.querySelector('#price-sub').scrollHeight + 1) + 'px';
 if (document.querySelector('#price-sub').scrollHeight > 230) {
     if (document.querySelector('#price-sub').classList.contains('noscrollbar')) {
         document.querySelector('#price-sub').classList.remove('noscrollbar')
@@ -325,7 +294,7 @@ opensidebar.addEventListener('click', function(){
     if (leftside.classList.contains('active-sidebar')) {
         leftside.style.left = '0px'
     }else{
-        leftside.style.left = '-320px'
+        leftside.style.left = '-330px'
     }
 })
 
@@ -333,5 +302,5 @@ closesidebar.addEventListener('click', function() {
     if (leftside.classList.contains('active-sidebar')) {
         leftside.classList.remove('active-sidebar');
     }
-    leftside.style.left = '-320px'
+    leftside.style.left = '-330px'
 })

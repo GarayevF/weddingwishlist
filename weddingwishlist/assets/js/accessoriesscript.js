@@ -45,7 +45,6 @@ color_close.addEventListener('mousedown', function(e){
     let subcolor = document.querySelector('#color-sub');
     let hght = subcolor.scrollHeight;
     subcolor.style.height = (hght + 1) + 'px';
-    subcolor.style.marginTop = '0';
     color_search.focus();
 })
 
@@ -56,7 +55,6 @@ color.addEventListener('mousedown', function(e){
     let hght = subcolor.scrollHeight;
     if (subcolor.classList.contains('active')){
         subcolor.style.height = (hght + 1) + 'px';
-        subcolor.style.marginTop = '0';
         color_search.focus()
     }else{
         subcolor.style.height = 0 + 'px';
@@ -73,25 +71,8 @@ color_search.addEventListener('focus', function(){
         subcolor.classList.add('active');
     }
     subcolor.style.height = (hght + 1) + 'px';
-    subcolor.style.marginTop = '0';
 
 })
-
-// color_search.addEventListener('blur', function(){
-//     if (!colorIsClicked) {
-//         let subcolor = document.querySelector('#color-sub');
-
-//         if (subcolor.classList.contains('active')){
-//             subcolor.classList.remove('active');
-//         }
-        
-//         subcolor.style.height = 0 + 'px';
-//         subcolor.style.marginTop = '20px';
-//     }else{
-//         colorIsClicked = false
-//         color_search.focus()
-//     }
-// })
 
 color_search.addEventListener('keyup', function(){
     let filter = color_search.value.toUpperCase();
@@ -135,7 +116,6 @@ gender.addEventListener('mousedown', function(e){
     let hght = subgender.scrollHeight;
     if (subgender.classList.contains('active')){
         subgender.style.height = (hght + 1) + 'px';
-        subgender.style.marginTop = '0';
     }else{
         subgender.style.height = 0 + 'px';
     }
@@ -173,7 +153,6 @@ fabric_close.addEventListener('mousedown', function(e){
     let subfabric = document.querySelector('#fabric-sub');
     let hght = subfabric.scrollHeight;
     subfabric.style.height = (hght + 1) + 'px';
-    subfabric.style.marginTop = '0';
     fabric_search.focus();
 })
 
@@ -184,11 +163,10 @@ fabric.addEventListener('mousedown', function(e){
     let hght = subfabric.scrollHeight;
     if (subfabric.classList.contains('active')){
         subfabric.style.height = (hght + 1) + 'px';
-        subfabric.style.marginTop = '0';
+
         fabric_search.focus()
     }else{
         subfabric.style.height = 0 + 'px';
-        subfabric.style.marginTop = '20px';
         fabric_search.blur()
     }
     
@@ -201,25 +179,8 @@ fabric_search.addEventListener('focus', function(){
         subfabric.classList.add('active');
     }
     subfabric.style.height = (hght + 1) + 'px';
-    subfabric.style.marginTop = '0';
 
 })
-
-// fabric_search.addEventListener('blur', function(){
-//     if (!fabricIsClicked) {
-//         let subfabric = document.querySelector('#fabric-sub');
-
-//         if (subfabric.classList.contains('active')){
-//             subfabric.classList.remove('active');
-//         }
-        
-//         subfabric.style.height = 0 + 'px';
-//         subfabric.style.marginTop = '20px';
-//     }else{
-//         fabricIsClicked = false
-//         fabric_search.focus()
-//     }
-// })
 
 fabric_search.addEventListener('keyup', function(){
     let filter = fabric_search.value.toUpperCase();
@@ -354,7 +315,7 @@ opensidebar.addEventListener('click', function(){
     if (leftside.classList.contains('active-sidebar')) {
         leftside.style.left = '0px'
     }else{
-        leftside.style.left = '-320px'
+        leftside.style.left = '-330px'
     }
 })
 
@@ -362,5 +323,5 @@ closesidebar.addEventListener('click', function() {
     if (leftside.classList.contains('active-sidebar')) {
         leftside.classList.remove('active-sidebar');
     }
-    leftside.style.left = '-320px'
+    leftside.style.left = '-330px'
 })
