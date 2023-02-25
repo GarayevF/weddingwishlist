@@ -78,7 +78,7 @@ body{
             .gallery{
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-start;
+                align-items: center;
                 border-bottom: 1px solid #d9d9d9;
                 cursor: pointer;
                 p{
@@ -551,8 +551,8 @@ body{
                         img{
                             height: 240px;
                             width: 100%;
-                            object-fit: cover;
-                            object-position: top center;
+                            object-fit: contain;
+                            object-position: center center;
                         }
                         img.main-image{
                             position: absolute;

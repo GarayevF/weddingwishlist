@@ -74,7 +74,7 @@ body {
 #Tab-divs .container .left .gallery {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   border-bottom: 1px solid #d9d9d9;
   cursor: pointer;
 }
@@ -114,47 +114,6 @@ body {
 }
 #Tab-divs .container .left #gallery-sub ul li a span {
   font-size: 15px;
-}
-#Tab-divs .container .left .gender {
-  display: flex;
-  flex-direction: column;
-}
-#Tab-divs .container .left .gender .name-div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  cursor: pointer;
-}
-#Tab-divs .container .left .gender .name-div span {
-  font-size: 18px;
-  font-weight: 500;
-}
-#Tab-divs .container .left #gender-sub {
-  overflow-y: auto;
-  max-height: 230px;
-  transition: 0.3s;
-  border-bottom: 1px solid #d9d9d9;
-  background-color: transparent;
-}
-#Tab-divs .container .left #gender-sub ul {
-  padding: 5px 0 10px;
-}
-#Tab-divs .container .left #gender-sub ul li {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-#Tab-divs .container .left #gender-sub ul li span {
-  font-size: 15px;
-}
-#Tab-divs .container .left #gender-sub ul li:not(:first-child) {
-  padding: 12px 0;
-}
-#Tab-divs .container .left #gender-sub ul li:first-child {
-  padding: 0 0 12px;
 }
 #Tab-divs .container .left .color {
   display: flex;
@@ -489,7 +448,7 @@ body {
   box-shadow: 0px 3px 3px #eeeeee;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 240px auto;
+  grid-template-rows: 300px auto;
   transition: 0.3s;
 }
 #Tab-divs .container .right .Cards .inner-container .card.bridal:hover {
@@ -539,7 +498,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .right .Cards .inner-container .card.bridal img {
-  height: 240px;
+  height: 300px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -644,7 +603,7 @@ body {
   #Tab-divs .left .gallery p span {
     font-size: 16px !important;
   }
-  #Tab-divs .left .neckline .name-div span, #Tab-divs .left .silhouette .name-div span, #Tab-divs .left .color .name-div span, #Tab-divs .left .fabric .name-div span, #Tab-divs .left .gender .name-div span {
+  #Tab-divs .left .neckline .name-div span, #Tab-divs .left .silhouette .name-div span, #Tab-divs .left .color .name-div span, #Tab-divs .left .fabric .name-div span {
     font-size: 16px !important;
   }
   #Tab-divs .left .price span {

@@ -114,35 +114,6 @@ color_search.addEventListener('keyup', function(){
 })
 
 
-let gender = document.querySelector('#Tab-divs .left .gender .name-div');
-let genderIsClicked = false
-
-document.querySelector('#gender-sub').style.height = (document.querySelector('#gender-sub').scrollHeight) + 'px';
-if (document.querySelector('#gender-sub').scrollHeight > 230) {
-    if (document.querySelector('#gender-sub').classList.contains('noscrollbar')) {
-        document.querySelector('#gender-sub').classList.remove('noscrollbar')
-    }
-}else{
-    if (!document.querySelector('#gender-sub').classList.contains('noscrollbar')) {
-        document.querySelector('#gender-sub').classList.add('noscrollbar')
-    }
-}
-
-gender.addEventListener('mousedown', function(e){
-    e.preventDefault();
-    let subgender = document.querySelector('#gender-sub');
-    subgender.classList.toggle('active');
-    let hght = subgender.scrollHeight;
-    if (subgender.classList.contains('active')){
-        subgender.style.height = (hght + 1) + 'px';
-        subgender.style.marginTop = '0';
-    }else{
-        subgender.style.height = 0 + 'px';
-    }
-    
-})
-
-
 
 
 let fabric = document.querySelector('#Tab-divs .left .fabric .name-div');
