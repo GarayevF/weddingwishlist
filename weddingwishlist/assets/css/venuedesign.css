@@ -432,6 +432,7 @@ body {
   display: grid;
   grid-template-rows: 220px auto;
   transition: 0.3s;
+  z-index: 99;
 }
 #Tab-divs .container .right-side .Cards .inner-container .card.palace:hover {
   box-shadow: 0px 3px 3px 3px #d6d6d6;
@@ -624,7 +625,6 @@ body {
   #Tab-divs #Cards-div .inner-container .card {
     grid-template-rows: 160px auto;
     border-radius: 8px;
-    z-index: 99;
   }
   #Tab-divs #Cards-div .inner-container .card img {
     height: 160px;
