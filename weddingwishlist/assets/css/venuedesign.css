@@ -347,8 +347,11 @@ body {
 #Tab-divs .container .right-side .upper-cards-div {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-bottom: 1rem;
+}
+#Tab-divs .container .right-side .upper-cards-div #searchresulttext {
+  color: gray;
 }
 #Tab-divs .container .right-side .upper-cards-div .fa-solid.fa-sliders {
   display: none;
@@ -427,7 +430,7 @@ body {
   box-shadow: 0px 3px 3px #eeeeee;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 240px auto;
+  grid-template-rows: 220px auto;
   transition: 0.3s;
 }
 #Tab-divs .container .right-side .Cards .inner-container .card.palace:hover {
@@ -467,7 +470,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .right-side .Cards .inner-container .card.palace img {
-  height: 240px;
+  height: 220px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -564,20 +567,6 @@ body {
   .container {
     padding: 0 25px;
   }
-  #Tab-divs #Cards-div .inner-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  #Tab-divs #Cards-div .inner-container .card .card-body .details {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-  #Tab-divs #Cards-div .inner-container .card .card-body .details .left, #Tab-divs #Cards-div .inner-container .card .card-body .details .right {
-    grid-template-columns: 20px auto;
-  }
-  #Tab-divs #Cards-div .inner-container .card .card-body .details .left i, #Tab-divs #Cards-div .inner-container .card .card-body .details .right i {
-    text-align: center;
-  }
 }
 @media (max-width: 768px) {
   .container {
@@ -599,10 +588,13 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   #Tab-divs #Cards-div .inner-container .card {
-    grid-template-rows: 280px auto;
+    grid-template-rows: 220px auto;
   }
   #Tab-divs #Cards-div .inner-container .card img {
-    height: 280px;
+    height: 220px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .swiper .swiper-button-next::after, #Tab-divs #Cards-div .inner-container .card .swiper .swiper-button-prev::after {
+    font-size: 30px;
   }
 }
 @media (max-width: 600px) {
@@ -653,6 +645,44 @@ body {
   }
 }
 @media (max-width: 1300px) {
+  .container {
+    padding: 0 25px;
+  }
+  #Cards-div .inner-container .card .card-body .details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  #Cards-div .inner-container .card .card-body .details .left, #Cards-div .inner-container .card .card-body .details .right {
+    grid-template-columns: 20px auto;
+  }
+  #Cards-div .inner-container .card .card-body .details .sub-title {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  #Tab-divs #Cards-div .inner-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .left, #Tab-divs #Cards-div .inner-container .card .card-body .details .right {
+    grid-template-columns: 20px auto;
+  }
+  #Tab-divs #Cards-div .inner-container .card .card-body .details .left i, #Tab-divs #Cards-div .inner-container .card .card-body .details .right i {
+    text-align: center;
+  }
+  #Tab-divs #Cards-div .inner-container .card .swiper .swiper-button-next::after, #Tab-divs #Cards-div .inner-container .card .swiper .swiper-button-prev::after {
+    font-size: 35px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 25px;
+  }
   #Tab-divs .container {
     grid-template-columns: auto;
   }
@@ -676,34 +706,17 @@ body {
   #Tab-divs .container .right-side #opensidebar {
     display: inline-block;
   }
-  #Tab-divs .container .right-side .upper-cards-div {
-    justify-content: space-between;
-  }
-  #Cards-div .inner-container .card .card-body .details {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-  #Cards-div .inner-container .card .card-body .details .left, #Cards-div .inner-container .card .card-body .details .right {
-    grid-template-columns: 20px auto;
-  }
-  #Cards-div .inner-container .card .card-body .details .sub-title {
-    width: 100%;
+  #Tab-divs .container .right-side #searchresulttext {
+    display: none;
   }
 }
-@media (min-width: 992px) and (max-width: 1100px) {
-  #Tab-divs #Cards-div .inner-container {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 1025px) and (max-width: 1300px) {
+  #Tab-divs .container {
+    grid-template-columns: 220px auto;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
   }
-  #Tab-divs #Cards-div .inner-container .card .card-body .details {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-  #Tab-divs #Cards-div .inner-container .card .card-body .details .left, #Tab-divs #Cards-div .inner-container .card .card-body .details .right {
-    grid-template-columns: 20px auto;
-  }
-  #Tab-divs #Cards-div .inner-container .card .card-body .details .left i, #Tab-divs #Cards-div .inner-container .card .card-body .details .right i {
-    text-align: center;
+  #Tab-divs .container .left-side {
+    width: 220px;
   }
 }/*# sourceMappingURL=venuedesign.css.map */
