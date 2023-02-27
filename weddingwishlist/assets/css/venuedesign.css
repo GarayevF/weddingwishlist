@@ -545,6 +545,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 9;
   overflow: hidden;
 }
 #Tab-divs .container .right-side .Cards .inner-container .card.palace .swiper .swiper-slide .background-image__image {
@@ -623,6 +624,7 @@ body {
   #Tab-divs #Cards-div .inner-container .card {
     grid-template-rows: 160px auto;
     border-radius: 8px;
+    z-index: 99;
   }
   #Tab-divs #Cards-div .inner-container .card img {
     height: 160px;
