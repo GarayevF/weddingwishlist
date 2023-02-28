@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-  padding: 0 5rem;
+  padding: 0 5.5rem;
 }
 
 #Tab-divs .container {
@@ -68,7 +68,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left-side .category .name-div span {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }
 #Tab-divs .container .left-side #category-sub {
@@ -109,7 +109,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left-side .loc .name-div span {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }
 #Tab-divs .container .left-side .loc .input-div {
@@ -183,7 +183,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left-side .price span {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }
 #Tab-divs .container .left-side #price-sub {
@@ -201,7 +201,7 @@ body {
   padding-left: 1px;
 }
 #Tab-divs .container .left-side #price-sub .checkbox-div input:checked + label {
-  font-weight: 600;
+  -webkit-text-stroke: 0.8px black;
 }
 #Tab-divs .container .left-side #price-sub .checkbox-div .checkbox_input {
   position: absolute;
@@ -213,13 +213,15 @@ body {
 }
 #Tab-divs .container .left-side #price-sub .checkbox-div .checkbox_icon {
   position: relative;
-  display: block;
   min-height: 1.5rem;
   padding-left: 1.75rem;
   cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
 }
 #Tab-divs .container .left-side #price-sub .checkbox-div .checkbox_input:hover + .checkbox_icon {
-  font-weight: 600;
+  -webkit-text-stroke: 0.8px black;
 }
 #Tab-divs .container .left-side #price-sub .checkbox-div .checkbox_input:hover + .checkbox_icon::after {
   opacity: 1;
@@ -266,7 +268,7 @@ body {
   cursor: pointer;
 }
 #Tab-divs .container .left-side .guest span {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
 }
 #Tab-divs .container .left-side #guest-sub {
@@ -284,7 +286,7 @@ body {
   padding-left: 1px;
 }
 #Tab-divs .container .left-side #guest-sub .checkbox-div input:checked + label {
-  font-weight: 600;
+  -webkit-text-stroke: 0.8px black;
 }
 #Tab-divs .container .left-side #guest-sub .checkbox-div .checkbox_input {
   position: absolute;
@@ -296,13 +298,15 @@ body {
 }
 #Tab-divs .container .left-side #guest-sub .checkbox-div .checkbox_icon {
   position: relative;
-  display: block;
   min-height: 1.5rem;
   padding-left: 1.75rem;
   cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
 }
 #Tab-divs .container .left-side #guest-sub .checkbox-div .checkbox_input:hover + .checkbox_icon {
-  font-weight: 600;
+  -webkit-text-stroke: 0.8px black;
 }
 #Tab-divs .container .left-side #guest-sub .checkbox-div .checkbox_input:hover + .checkbox_icon::after {
   opacity: 1;
@@ -420,7 +424,7 @@ body {
 #Tab-divs .container .right-side .Cards .inner-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-rows: auto;
 }
 #Tab-divs .container .right-side .Cards .inner-container .card.palace {

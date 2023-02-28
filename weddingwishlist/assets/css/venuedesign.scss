@@ -31,7 +31,7 @@ body{
 }
 
 .container{
-    padding: 0 5rem;
+    padding: 0 5.5rem;
 }
 
 
@@ -70,7 +70,7 @@ body{
                     padding: 15px 0;
                     cursor: pointer;
                     span{
-                        font-size: 18px;
+                        font-size: 17px;
                         font-weight: 500;
                     }
                 }
@@ -112,7 +112,7 @@ body{
                     padding: 15px 0;
                     cursor: pointer;
                     span{
-                        font-size: 18px;
+                        font-size: 17px;
                         font-weight: 500;
                     }
                 }
@@ -184,7 +184,7 @@ body{
                 padding: 15px 0;
                 cursor: pointer;
                 span{
-                    font-size: 18px;
+                    font-size: 17px;
                     font-weight: 500;
                 }
             }
@@ -203,7 +203,7 @@ body{
                     input{
                         &:checked{
                             +label {
-                                font-weight: 600;
+                                -webkit-text-stroke: .8px black;
                             }
                         }
                     }
@@ -217,18 +217,17 @@ body{
                     }
                     .checkbox_icon{
                         position: relative;
-                        display: block;
                         min-height: 1.5rem;
                         padding-left: 1.75rem;
                         cursor: pointer;
-                        &:hover{
-
-                        }
+                        font-size: 15px;
+                        display: flex;
+                        align-items: center;
                     }
                     .checkbox_input{
                         &:hover{
                             +.checkbox_icon {
-                                font-weight: 600;
+                                -webkit-text-stroke: .8px black;
                                 &::after{
                                     opacity: 1;
                                 }
@@ -294,7 +293,7 @@ body{
                 padding: 15px 0;
                 cursor: pointer;
                 span{
-                    font-size: 18px;
+                    font-size: 17px;
                     font-weight: 500;
                 }
             }
@@ -310,10 +309,11 @@ body{
                     text-align: left;
                     margin-bottom: 1rem;
                     padding-left: 1px;
+                    
                     input{
                         &:checked{
                             +label {
-                                font-weight: 600;
+                                -webkit-text-stroke: .8px black;
                             }
                         }
                     }
@@ -327,18 +327,17 @@ body{
                     }
                     .checkbox_icon{
                         position: relative;
-                        display: block;
                         min-height: 1.5rem;
                         padding-left: 1.75rem;
                         cursor: pointer;
-                        &:hover{
-
-                        }
+                        font-size: 15px;
+                        display: flex;
+                        align-items: center;
                     }
                     .checkbox_input{
                         &:hover{
                             +.checkbox_icon {
-                                font-weight: 600;
+                                -webkit-text-stroke: .8px black;
                                 &::after{
                                     opacity: 1;
                                 }
@@ -484,7 +483,7 @@ body{
                 .inner-container{
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
-                    gap: 1rem;
+                    gap: 1.5rem;
                     grid-template-rows: auto;
                     .card.palace{
                         cursor: pointer;
