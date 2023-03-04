@@ -244,6 +244,7 @@ body{
                             background-color: #fff;
                             border: 1px solid #efefef;
                             box-shadow: 0 1px 5px #00000026;
+                            border-radius: 0.5rem;
                             position: absolute;
                             top: calc(100% + 5px);
                             left: -1px;
@@ -1321,6 +1322,10 @@ body{
                     }
                     .hh-search-div-m{
                         display: grid;
+                        button{
+                            font-size: 16px;
+                            padding: 12px 5px;
+                        }
                     }
                 }
             }
