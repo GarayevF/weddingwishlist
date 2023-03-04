@@ -57,11 +57,9 @@ loc.addEventListener('mousedown', function(e){
     let hght = subloc.scrollHeight;
     if (subloc.classList.contains('active')){
         subloc.style.height = (hght + 1) + 'px';
-        
         loc_search.focus()
     }else{
         subloc.style.height = 0 + 'px';
-        
         loc_search.blur()
     }
     
@@ -74,8 +72,6 @@ loc_search.addEventListener('focus', function(){
         subloc.classList.add('active');
     }
     subloc.style.height = (hght + 1) + 'px';
-    
-
 })
 
 loc_search.addEventListener('keyup', function(){
@@ -233,4 +229,154 @@ closesidebar.addEventListener('click', function() {
         leftside.classList.remove('active-sidebar');
     }
     leftside.style.left = '-330px'
+})
+
+
+
+let left_search_input = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-left input');
+let right_search_input = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-right input');
+
+let left_search_dropdown = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-left .search-left-dropdown');
+let right_search_dropdown = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-right .search-right-dropdown');
+
+left_search_dropdown.style.height = (left_search_dropdown.scrollHeight + 1) + 'px';
+if (left_search_dropdown.scrollHeight > 230) {
+    if (left_search_dropdown.classList.contains('noscrollbar')) {
+        left_search_dropdown.classList.remove('noscrollbar')
+    }
+}else{
+    if (!left_search_dropdown.classList.contains('noscrollbar')) {
+        left_search_dropdown.classList.add('noscrollbar')
+    }
+}
+
+if (!left_search_dropdown.classList.contains('active')){
+    left_search_dropdown.style.height = 0 + 'px';
+}
+
+
+right_search_dropdown.style.height = (right_search_dropdown.scrollHeight + 1) + 'px';
+if (right_search_dropdown.scrollHeight > 230) {
+    if (right_search_dropdown.classList.contains('noscrollbar')) {
+        right_search_dropdown.classList.remove('noscrollbar')
+    }
+}else{
+    if (!right_search_dropdown.classList.contains('noscrollbar')) {
+        right_search_dropdown.classList.add('noscrollbar')
+    }
+}
+
+if (!right_search_dropdown.classList.contains('active')){
+    right_search_dropdown.style.height = 0 + 'px';
+}
+
+left_search_input.addEventListener('focus', function(){
+    let subloc = left_search_dropdown
+    subloc.style.visibility = 'visible'
+    let hght = subloc.scrollHeight;
+    if (!subloc.classList.contains('active')){
+        subloc.classList.add('active');
+    }
+    subloc.style.height = (hght + 1) + 'px';
+})
+
+left_search_input.addEventListener('blur', function(){
+    let subloc = left_search_dropdown
+    if (subloc.classList.contains('active')){
+        subloc.classList.remove('active');
+    }
+    subloc.style.height = 0 + 'px';
+    subloc.style.visibility = 'hidden'
+})
+
+right_search_input.addEventListener('focus', function(){
+    let subloc = right_search_dropdown
+    subloc.style.visibility = 'visible'
+    let hght = subloc.scrollHeight;
+    if (!subloc.classList.contains('active')){
+        subloc.classList.add('active');
+    }
+
+    let ul = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-right .search-right-dropdown ul');
+    let alllis = ul.querySelectorAll('li:not(:last-of-type');
+    if(right_search_input.value == ""){
+        if(window.innerWidth < 1024){
+            ul.style.columnCount = '1'
+            subloc.style.width = "100%";
+        }else{
+            ul.style.columnCount = '3'
+            subloc.style.width = "300%";
+        }
+        
+        alllis.forEach(e => {
+            e.style.borderBottom = '0px';
+        });
+    }else{
+        alllis.forEach(e => {
+            e.style.borderBottom = '1px solid #d9d9d9';
+        });
+    }
+    subloc.style.height = (hght + 1) + 'px';
+})
+
+right_search_input.addEventListener('blur', function(){
+    let subloc = right_search_dropdown
+    if (subloc.classList.contains('active')){
+        subloc.classList.remove('active');
+    }
+    subloc.style.height = 0 + 'px';
+    subloc.style.visibility = 'hidden'
+})
+
+
+left_search_input.addEventListener('keyup', function(){
+    
+    let filter = left_search_input.value.toUpperCase();
+    let ul = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-left .search-left-dropdown ul');
+    let li = ul.getElementsByTagName('li');
+    ul.style.columnCount = '1'
+    console.log(filter);
+    for (i = 0; i < li.length; i++) {
+        span = li[i].getElementsByTagName("span")[0];
+        txtValue = span.textContent || span.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "flex";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+    
+    let subloc = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-left .search-left-dropdown');
+    subloc.style.height = (ul.scrollHeight+1) + 'px';
+    
+})
+
+right_search_input.addEventListener('keyup', function(){
+    
+    let filter = right_search_input.value.toUpperCase();
+    let ul = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-right .search-right-dropdown ul');
+    let li = ul.getElementsByTagName('li');
+    ul.style.columnCount = '1'
+
+    
+    let alllis = ul.querySelectorAll('li:not(:last-child');
+    console.log(alllis);
+    alllis.forEach(e => {
+        e.style.borderBottom = '1px solid #d9d9d9';
+    });
+    
+    document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-right .search-right-dropdown').style.width = "100%";
+    for (i = 0; i < li.length; i++) {
+        span = li[i].getElementsByTagName("span")[0];
+        txtValue = span.textContent || span.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "flex";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+    
+    let subloc = document.querySelector('#Heading .container-custom-heading .all-div .left .hh-search-div .search-right .search-right-dropdown');
+    subloc.style.height = (ul.scrollHeight+1) + 'px';
+    
 })
