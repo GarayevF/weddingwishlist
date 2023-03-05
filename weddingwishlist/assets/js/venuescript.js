@@ -410,11 +410,13 @@ left_modal_close.addEventListener('click', function(){
 
     if(modal.classList.contains('active')){
         modal.style.height = '100%'
-        modal.style.visibility = 'visible'   
+        modal.style.visibility = 'visible'
+        document.body.style.overflow = 'hidden';   
     }
     else{
         modal.style.height = '0px';
         modal.style.visibility = 'hidden'
+        document.body.style.overflow = '';
     }
 })
 
@@ -425,11 +427,13 @@ left_modal_open.addEventListener('click', function(){
 
     if(modal.classList.contains('active')){
         modal.style.height = '100%'
-        modal.style.visibility = 'visible'   
+        modal.style.visibility = 'visible'
+        document.body.style.overflow = 'hidden';   
     }
     else{
         modal.style.height = '0px';
         modal.style.visibility = 'hidden'
+        document.body.style.overflow = '';
     }
 })
 
@@ -458,11 +462,13 @@ right_modal_close.addEventListener('click', function(){
 
     if(modal.classList.contains('active')){
         modal.style.height = '100%'
-        modal.style.visibility = 'visible'   
+        modal.style.visibility = 'visible'
+        document.body.style.overflow = 'hidden';   
     }
     else{
         modal.style.height = '0px';
         modal.style.visibility = 'hidden'
+        document.body.style.overflow = '';
     }
 })
 
@@ -473,11 +479,13 @@ right_modal_open.addEventListener('click', function(){
 
     if(modal.classList.contains('active')){
         modal.style.height = '100%'
-        modal.style.visibility = 'visible'   
+        modal.style.visibility = 'visible'
+        document.body.style.overflow = 'hidden';   
     }
     else{
         modal.style.height = '0px';
         modal.style.visibility = 'hidden'
+        document.body.style.overflow = '';
     }
 })
 
@@ -496,12 +504,14 @@ window.addEventListener('resize', function(e){
         left_modal.style.visibility = 'hidden'   
         right_modal.classList.remove('active')
         right_modal.style.height = '0'
-        right_modal.style.visibility = 'hidden'   
+        right_modal.style.visibility = 'hidden'
+        document.body.style.overflow = '';   
     }else{
         left_search_dropdown.classList.remove('active')
         left_search_dropdown.style.height = 0 + 'px';
         right_search_dropdown.classList.remove('active')
         right_search_dropdown.style.height = 0 + 'px';
+        document.body.style.overflow = '';
     }
   });
 
